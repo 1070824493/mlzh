@@ -573,7 +573,7 @@ app.get('/unbindDevice', function(req, res) {
 							var modSqlParams = "";
 							var type = result[0].Type //获取注册码类型默认为1表示周卡
 
-							//0:天卡, 1:周卡, 2:月卡, 3:季卡, 4:半年卡, 5:年卡
+							//0:天卡, 1:周卡, 2:月卡, 3:季卡, 4:半年卡, 5:年卡, 6:永久卡
 							switch (type) {
 								case 0:
 									//天卡

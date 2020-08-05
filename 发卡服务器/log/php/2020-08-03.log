@@ -1,0 +1,26 @@
+[03-Aug-2020 01:16:38 Asia/Chongqing] PHP Warning:  Use of undefined constant gd_info - assumed 'gd_info' (this will throw an Error in a future version of PHP) in /www/wwwroot/antme.ml/application/modules/Install/controllers/Setpone.php on line 29
+[03-Aug-2020 01:18:56 Asia/Chongqing] PHP Warning:  Yaf\Loader::autoload(): path too long: '/www/wwwroot/antme.ml/application/plugins/RouterPlugin' in /www/wwwroot/antme.ml/application/Bootstrap.php on line 53
+[03-Aug-2020 01:18:56 Asia/Chongqing] PHP Warning:  Yaf\Loader::autoload(): Failed opening script /www/wwwroot/antme.ml/application/plugins: Success in /www/wwwroot/antme.ml/application/Bootstrap.php on line 53
+[03-Aug-2020 01:18:56 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Class 'RouterPlugin' not found in /www/wwwroot/antme.ml/application/Bootstrap.php:53
+Stack trace:
+#0 [internal function]: Bootstrap->_initPlugin(Object(Yaf\Dispatcher))
+#1 /www/wwwroot/antme.ml/public/index.php(12): Yaf\Application->bootstrap()
+#2 {main}
+  thrown in /www/wwwroot/antme.ml/application/Bootstrap.php on line 53
+[03-Aug-2020 01:22:54 Asia/Chongqing] PHP Warning:  Yaf\Loader::autoload(): path too long: '/www/wwwroot/antme.ml/application/plugins/RouterPlugin' in /www/wwwroot/antme.ml/application/Bootstrap.php on line 53
+[03-Aug-2020 01:22:54 Asia/Chongqing] PHP Warning:  Yaf\Loader::autoload(): Failed opening script /www/wwwroot/antme.ml/application/plugins: Success in /www/wwwroot/antme.ml/application/Bootstrap.php on line 53
+[03-Aug-2020 01:22:54 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Class 'RouterPlugin' not found in /www/wwwroot/antme.ml/application/Bootstrap.php:53
+Stack trace:
+#0 [internal function]: Bootstrap->_initPlugin(Object(Yaf\Dispatcher))
+#1 /www/wwwroot/antme.ml/public/index.php(12): Yaf\Application->bootstrap()
+#2 {main}
+  thrown in /www/wwwroot/antme.ml/application/Bootstrap.php on line 53
+[03-Aug-2020 01:23:39 Asia/Chongqing] PHP Warning:  Yaf\Loader::autoload(): path too long: '/www/wwwroot/antme.ml/application/plugins/RouterPlugin' in /www/wwwroot/antme.ml/application/Bootstrap.php on line 53
+[03-Aug-2020 01:23:39 Asia/Chongqing] PHP Warning:  Yaf\Loader::autoload(): Failed opening script /www/wwwroot/antme.ml/application/plugins: Success in /www/wwwroot/antme.ml/application/Bootstrap.php on line 53
+[03-Aug-2020 01:23:39 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Class 'RouterPlugin' not found in /www/wwwroot/antme.ml/application/Bootstrap.php:53
+Stack trace:
+#0 [internal function]: Bootstrap->_initPlugin(Object(Yaf\Dispatcher))
+#1 /www/wwwroot/antme.ml/public/index.php(12): Yaf\Application->bootstrap()
+#2 {main}
+  thrown in /www/wwwroot/antme.ml/application/Bootstrap.php on line 53
+[03-Aug-2020 01:24:56 Asia/Chongqing] PHP Warning:  array_rand(): Array is empty in /www/wwwroot/antme.ml/application/model/M_Email.php on line 40
