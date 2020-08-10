@@ -1,0 +1,125 @@
+
+
+Function star1
+    UIP.SetAttribute "1星狗粮", {"选中":True}
+    UIP.SetAttribute "2星狗粮", {"选中":false}
+    UIP.SetAttribute "3星狗粮", {"选中":false}
+    UIP.SetAttribute "4星狗粮", {"选中":false}
+End Function
+Function star2
+    UIP.SetAttribute "1星狗粮", {"选中":false}
+    UIP.SetAttribute "2星狗粮", {"选中":true}
+    UIP.SetAttribute "3星狗粮", {"选中":false}
+    UIP.SetAttribute "4星狗粮", {"选中":false}
+End Function
+Function star3
+    UIP.SetAttribute "1星狗粮", {"选中":false}
+    UIP.SetAttribute "2星狗粮", {"选中":false}
+    UIP.SetAttribute "3星狗粮", {"选中":true}
+    UIP.SetAttribute "4星狗粮", {"选中":false}
+End Function
+Function star4
+    UIP.SetAttribute "1星狗粮", {"选中":false}
+    UIP.SetAttribute "2星狗粮", {"选中":false}
+    UIP.SetAttribute "3星狗粮", {"选中":false}
+    UIP.SetAttribute "4星狗粮", {"选中":true}
+End Function
+
+Function selectAll
+
+    UIP.SetAttribute "5Z", {"选中":true}
+    UIP.SetAttribute "5C", {"选中":true}
+    UIP.SetAttribute "6L", {"选中":true}
+    UIP.SetAttribute "6Z", {"选中":true}
+
+End Function
+
+/*
+
+				多选框:
+				{
+					注释:"文字大小、高度、宽度是可选属性，如需使用默认值，可保持值为0或直接删除此属性",
+					名称:"解绑",
+					提示内容:"解绑",
+					点击响应:"函数名1",
+					选中:false,
+					文字大小:0,
+					高度:0,
+					宽度:0
+				},	
+
+ Select Case type
+    Case  2, 6, 10, 11, 12
+        地下城循环 
+    Case 20, 21, 22, 23, 24
+        异界地下循环 
+    
+    Case 1
+        爬塔循环 
+    
+    Case 3
+        突袭模式 
+    
+    Case 4
+        狗粮循环 
+    Case 5
+        竞技场循环 
+    		    		
+    End Select
+符文筛选界面备份:
+	水平布局:
+		{
+				注释:"符文筛选行",
+				文字框:
+				{
+					注释:"文字大小、高度、宽度是可选属性，如需使用默认值，可保持值为0或直接删除此属性",
+					名称:"符文筛选标题",
+					显示内容:"高级筛选："
+				},	
+				注释:"用于将多个控件放在同一行",
+				多选框:
+				{
+					注释:"文字大小、高度、宽度是可选属性，如需使用默认值，可保持值为0或直接删除此属性",
+					名称:"5ZSX",
+					提示内容:"五星紫",
+					点击响应:"函数名1",
+					选中:false,
+					文字大小:0,
+					高度:0,
+					宽度:0
+				},	
+				多选框:
+				{
+					注释:"文字大小、高度、宽度是可选属性，如需使用默认值，可保持值为0或直接删除此属性",
+					名称:"5CSX",
+					提示内容:"五星橙",
+					点击响应:"函数名1",
+					选中:false,
+					文字大小:0,
+					高度:0,
+					宽度:0
+				},
+				多选框:
+				{
+					注释:"文字大小、高度、宽度是可选属性，如需使用默认值，可保持值为0或直接删除此属性",
+					名称:"6LSX",
+					提示内容:"六星蓝",
+					点击响应:"函数名1",
+					选中:false,
+					文字大小:0,
+					高度:0,
+					宽度:0
+				},
+				多选框:
+				{
+					注释:"文字大小、高度、宽度是可选属性，如需使用默认值，可保持值为0或直接删除此属性",
+					名称:"6ZSX",
+					提示内容:"六星紫",
+					点击响应:"函数名1",
+					选中:false,
+					文字大小:0,
+					高度:0,
+					宽度:0
+				},
+		},
+*/

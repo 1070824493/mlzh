@@ -1,0 +1,980 @@
+Import "bbyreg.mql" //百宝云
+Import "ShanHai.lua"
+
+
+'181031-魔灵宝贝-张靖647458
+/*
+
+//以下为百宝云变量----------------------------//
+Dim 信息登录方式 = ReadUIConfig("登录方式", 0)  //注册码登录
+bbyreg.变量_Token = "5aed80adcfc30cb63c3810f92436f2d5"//换上你自己应用的token
+bbyreg.变量_机器码 = GetDeviceID() & DEVICE.GetImsi() & DEVICE.GetIccid()//可自行更改绑定信息
+bbyreg.变量_注册码 =ReadUIConfig("注册码")   //获取界面输入框信息，输入框["注册码"]
+bbyreg.变量_项目名称 = "测试项目"//云应用中创建项目时的名称
+
+//登录方式
+If 信息登录方式 = 0 Then
+    //注册登录
+    TracePrint "注册登录"
+    If bbyreg.函数_执行注册登录() Then
+        //注册成功,时间不足会返回失败,失败信息在 变量_错误信息 里
+        //返回:登陆状态|剩余时间(分钟)|访问令牌
+        TracePrint "注册返回：" & bbyreg.变量_注册登录信息
+    Else
+        //注册失败
+        TracePrint "注册失败"
+        TracePrint bbyreg.变量_注册登录信息
+        TracePrint bbyreg.变量_错误信息
+        ShowMessage bbyreg.变量_错误信息
+        Delay 2000
+        EndScript//停止脚本
+    End If
+    //注册成功,显示注册信息
+    //执行注册验证显示
+    Delay 2000
+    
+End If
+///////////////////////////////////////////////////////////////////
+
+bbyreg.变量_超时重登 = True//如果需要超时重登。
+Dim 信息线程ID = Thread.Start(执行心跳线程, 600)//间隔600秒心跳一次，10分钟。
+///////////////////////////////////////////////////////////////////
+//这个循环里开始写你的代码  
+//这个循环里开始写你的代码  
+//这个循环里开始写你的代码  
+//这个循环里开始写你的代码  
+
+*/
+
+
+Dim intX,intY,i,计次,x,y,user,名字Arr
+
+
+
+Dim 字母=ReadUIConfig("字母")
+Dim 数字=ReadUIConfig("数字")
+Dim 密码=ReadUIConfig("密码")
+Dim 帐号=ReadUIConfig("帐号")
+Dim 单号次数=ReadUIConfig("单号次数")
+Dim 延迟=ReadUIConfig("延迟")
+Dim 随机位数=ReadUIConfig("随机位数")
+Dim 升级技能=True
+
+Dim path="/sdcard/Pictures/"   '雷电共享文件夹路径
+
+
+计次 = 0
+
+
+
+Log.Open 
+
+main 
+
+Sub main	
+    Do 
+        TracePrint "main..."
+        If 计次 >= CLng(单号次数) Then 
+            EndScript 
+        End If 
+        Do            
+            '提示需要更新的时候，点击确定不要更新
+            If 找图(7, 8, 633, 477, "GG_桌面") = 1 Then 
+                Tap x, y
+                Delay 5000
+            End If
+            If 找图(346, 367, 417, 472, "确定") = 1 Then 
+                触摸_随机点 x + 10, y + 10, x, y
+                Delay 随机数(2000, 1000)        		
+            End If
+            If 找图(538, 414, 637, 478, "开始") = 1 Then 
+                触摸_随机点 x + 10, y + 10, x, y
+                Delay 随机数(2000, 1000)
+                Exit Do 
+            End If
+            出错倒计时 "游戏开始"
+        Loop
+        '打开魔灵宝贝客户端        
+        If Sys.GetFront() <> "cn.miyugame.mlzh.lehaihai" Then 
+            RunApp "cn.miyugame.mlzh.lehaihai"
+            Delay 随机数(2000,1000)
+        End If
+        
+        注册	         
+        新手任务 
+        打开GG
+        战斗
+        写入帐户密码
+        KillApp "cn.miyugame.mlzh.lehaihai"
+        Delay 随机数(5000, 3000)
+        计次 = 计次 + 1        
+    Loop 
+End Sub
+
+Function 写入帐户密码()
+    TracePrint "写入帐户密码"
+    Dim MyVar,MyValue
+    MyVar = user & "---" & 密码
+    MyValue = File.Read(path & 帐号)
+    Call File.Write(path & 帐号, MyValue & MyVar & "\r\n")   
+    TracePrint File.Read(path & 帐号)	
+End Function
+
+
+Sub 注册
+    TracePrint "注册..."
+    填写帐号前    
+    填写帐号中
+    填写帐号后 
+End Sub
+
+Sub 打开GG
+    TracePrint "打开GG..."
+    通用点击 0, 0, 639, 474, "Attachment:GG.png"
+    Delay 随机数(2000, 1000)
+    通用点击 254, 70, 370, 462, "Attachment:魔灵宝贝.png"
+    Delay 随机数(2000, 1000)
+    Do
+        If 找色(151, 452, 343, 480, "01F502", "-1|5|00FF00,3|1|00FF00,2|7|01F701", "打开GG") = 1 Then 
+            Exit Do 
+        End If
+        Delay 1000
+    Loop
+    Delay 2000
+    Tap 384,27 '点保存
+    Delay 3000
+    Tap 557,118 '点加载
+    Delay 1000
+    确认到达 438, 349, 516, 415, "Attachment:载入.png"
+    Delay 2000
+    Tap 161,237 '点冻结
+    Delay 2000
+    Tap 473,379 '点载入
+    Delay 2000
+    通用点击 416, 276, 499, 373, "Attachment:确定1.png"
+    Delay 1000
+    确认到达 383, 1, 437, 29, "Attachment:2.png"
+    Delay 1000
+    Tap 612,29 '关闭GG
+    Delay 2000
+End Sub
+
+Sub 填写帐号前
+    TracePrint "填写帐号前"
+    Do
+        If 找图(251,258,346,339,"天空") = 1 Then '点击开始游戏
+            触摸_随机点 296, 398, 305, 408            
+            Delay 随机数(5000, 3000)
+        End If
+        If 找图(328, 226, 407, 324, "点击") = 1 Then '点击重新加载
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)       	
+        End If
+        If 找图(315, 371, 390, 479, "快速注册") = 1 Then 
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)        	
+        End If
+        If 找图(356,349,422,470,"用户名注册") = 1 Then  '用户名注册
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)
+        End If
+        If 找图(1,240,61,393,"用户名") = 1 Then   '到达用户名注册页面
+            Delay 随机数(2000, 1000)
+            Exit Do 
+        End If
+        If 找图(346, 367, 417, 472, "确定") = 1 Then 
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)        		
+        End If
+        出错倒计时 "填写帐号前"		
+    Loop
+End Sub
+
+Sub 填写帐号中
+    TracePrint "填写帐号中"
+    user = 随机字符串(字母) & 随机数字(数字) '生成用户名
+    TracePrint  user
+    Delay 随机数(500, 300)
+    触摸_随机点 109,280, 119, 290 '用户名输入框
+    Delay 随机数(500, 300)
+    InputText user '输入用户名
+    Delay 随机数(500, 300) 
+    触摸_随机点 174,288, 185, 298  '密码输入框
+    Delay 随机数(500, 300) 
+    InputText 密码  '输入密码
+    Delay 随机数(500, 300) 
+    触摸_随机点 238,305, 248, 315 '确认密码输入框
+    Delay 随机数(500, 300) 
+    InputText 密码  '输入密码
+    Delay 随机数(500, 300)
+    触摸_随机点 325,257, 335, 267 '立即注册	
+    Delay 随机数(2000, 1000)
+End Sub
+
+Sub 填写帐号后
+    TracePrint "填写帐号后"
+    Do
+        If 找图(247,70,304,156,"进入游戏") = 1 Then 
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)			
+        End If
+        If 找图(251,258,346,339,"天空") = 1 Then '点击开始游戏
+            触摸_随机点 296, 398, 305, 408
+            Delay 随机数(5000, 3000)
+            If 找图(251, 258, 346, 339, "天空") = 0 Then 
+                Delay 30000        
+            End If   
+        End If        
+        If 找图(444,0,519,48,"完成") = 1 Then 
+            Delay 随机数(2000, 1000)
+            InputText user
+            Delay 随机数(3000, 2000)
+            触摸_随机点 475,22, 480, 27 '点击完成
+            Delay 随机数(3000, 2000) 
+            触摸_随机点 485,116,495,126 '点击确认
+            Delay 8000
+            Exit Do        	
+        End If
+        出错倒计时 "填写帐号后"	
+    Loop 
+End Sub
+
+Sub 新手任务
+    TracePrint "新手任务1..."    
+    Do
+        '找到艾琳对话，点击加快对话，直至没有
+        If 找图(550, 363, 610, 422, "艾琳") = 1 Then 
+            Do
+                If 找图(550, 363, 610, 422, "艾琳") = 1 Then 
+                    触摸_随机点 383, 413, 388, 418                    
+                    Delay 随机数(300, 150)
+                    '点击魔力之泉
+                    If 找图(297, 161, 345, 225, "箭头_魔力之泉") = 1 Then 
+                        触摸_随机点 x + 10, y + 10, x, y
+                        Delay 随机数(2000, 1000)	                    	
+                    End If                    
+                Else 
+                    Exit Do 
+                End If
+            Loop
+        End If
+        '找到杜兰德对话，点击加快对话，直至没有
+        If 找图(38, 374, 111, 419, "杜兰德") = 1 Then 
+            Do
+                If 找图(38, 374, 111, 419, "杜兰德") = 1 Then  
+                    触摸_随机点 383, 413, 388, 418                   
+                    Delay 随机数(300, 150)
+                Else 
+                    Exit Do 
+                End If
+            Loop
+        End If
+        '全新地区开启
+        If 找图(268, 341, 377, 426, "确认2") = 1 Then 
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)				
+        End If
+        '属性相生说明
+        If 找图(291, 337, 348, 406, "关闭") = 1 Then 
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)        	
+        End If 
+        '新手任务召唤
+        If 找色(432, 382, 488, 429, "021436", "10|0|48E3F0,19|-1|000F32,11|6|46E1F0,14|6|43E0F0,21|6|031234", "魔灵召唤") = 1 Then
+            Delay 随机数(2000, 1000)
+            If 找图(437, 443, 495, 478, "召唤") = 1 Then '确认找到箭头处是召唤菜单
+                触摸_随机点 451, 439, 461, 449 '点击召唤
+                Delay 随机数(2000, 1000)
+                Do
+                    '魔灵召唤阵第一行
+                    If 找色(482, 84, 525, 157, "021436", "10|0|48E3F0,19|-1|000F32,11|6|46E1F0,14|6|43E0F0,21|6|031234","第一次召唤") = 1 Then 
+                        单次点击 451, 111, 541, 170, "Attachment:召唤书.png"  	
+                        Delay 随机数(2000, 1000)      	
+                        通用点击 137, 383, 194, 443, "Attachment:钻.png"    	
+                        Delay 随机数(2000, 1000)
+                        通用点击 218, 244, 290, 322, "Attachment:是.png"
+                        Delay 随机数(2000, 1000)
+                        触摸_随机点 557, 432, 567, 433 'skip
+                        Delay 随机数(2000, 1000)                    
+                        通用点击 462, 324, 534, 408, "Attachment:确认1.png"
+                        Exit Do  
+                    End If
+                    '魔灵召唤阵第三行
+                    If 找色(484, 223, 522, 287, "021436", "10|0|48E3F0,19|-1|000F32,11|6|46E1F0,14|6|43E0F0,21|6|031234","第二次召唤") = 1 Then 
+                        单次点击 441, 250, 523, 303, "Attachment:神秘召唤.png"                     	
+                        Delay 随机数(2000, 1000)      	
+                        通用点击 138, 382, 191, 435, "Attachment:钻1.png"                    	
+                        Delay 随机数(2000, 1000)
+                        通用点击 218, 244, 290, 322, "Attachment:是.png"
+                        触摸_随机点 557, 432, 567, 433 'skip
+                        Delay 随机数(2000, 1000)
+                        通用点击 462, 324, 534, 408, "Attachment:确认1.png"
+                        Exit Do 
+                    End If
+                Loop
+            End If 
+        End If
+        
+        '新手任务战斗
+        If 找色(303, 393, 337, 431, "031D40", "2|-4|19CFF3,7|-5|18CFF4,9|0|000F32", "战斗") = 1 Then 
+            Delay 随机数(2000, 1000)
+            If 找图(300, 441, 349, 477, "战斗2") = 1 Then '确认找到箭头处是战斗菜单            	
+                触摸_随机点 309, 433, 319, 443 '点击战斗
+                Delay 随机数(2000, 1000)
+                单次点击 137, 236, 200, 280, "Attachment:加仑丛林.png"
+                Delay 随机数(2000, 1000)
+                通用点击 543, 149, 619, 220, "Attachment:战斗1.png"
+                Delay 随机数(2000, 1000)
+                确认到达 490, 328, 561, 384, "Attachment:开始战斗.png"
+                Delay 随机数(2000, 1000)
+                '第一个魔灵
+                触摸_随机点 32, 324, 42, 334
+                Delay 随机数(2000, 1000)
+                '第二个魔灵
+                触摸_随机点 94, 326, 104, 336
+                Delay 随机数(2000, 1000)
+                '开始战斗
+                触摸_随机点 524, 337, 534, 347
+                Delay 随机数(2000, 1000)
+                //                通用点击 298, 213, 364, 268, "Attachment:攻击.png"
+                Delay 随机数(2000, 1000)
+                Do
+                    If 找图(283, 313, 362, 396, "确定3") = 1 Then 
+                        触摸_随机点 x + 10, y + 10, x, y
+                        Exit Do 
+                    Else 
+                        触摸_随机点 404, 129, 414, 139
+                        Delay 随机数(3000, 2000)
+                        触摸_随机点 293, 118, 303, 128
+                        Delay 随机数(3000, 2000)	
+                    End If
+                    
+                    出错倒计时 "新手任务战斗"                    
+                Loop
+            End If
+        End If
+        
+        '新手任务魔灵
+        If 找色(369, 377, 413, 449, "000F32", "6|3|49E3F0,12|4|45E1F0,19|3|000F32", "魔灵") = 1 Then 
+            Delay 随机数(2000, 1000)
+            If 找图(366, 440, 421, 478, "魔灵") = 1 Then '确认找到箭头处是魔灵菜单  
+                触摸_随机点 384, 432, 394, 432 '点击魔灵             
+                Delay 随机数(2000, 1000)
+                通用点击 282, 206, 336, 265, "Attachment:符文.png"
+                Delay 随机数(2000, 1000)
+                通用点击 351, 263, 395, 313, "Attachment:祝福.png"
+                Delay 随机数(2000, 1000)
+                单次点击 338, 260, 396, 318, "Attachment:符号.png"
+                Delay 随机数(2000, 1000)
+                通用点击 215, 312, 259, 368, "Attachment:镶嵌.png"
+                Delay 随机数(2000, 1000)
+                通用点击 221, 248, 295, 321, "Attachment:是.png"
+                Do
+                    If 找图(206, 97, 279, 170, "强化") = 1 Then 
+                        Delay 随机数(2000, 1000)
+                        触摸_随机点 x + 10, y + 10, x, y
+                        Exit Do 
+                    Else 
+                        触摸_随机点 436, 122, 446, 132
+                        Delay 随机数(2000, 1000)
+                    End If 
+                Loop
+                通用点击 138, 267, 200, 308, "Attachment:强化1.png"
+            End If
+        End If
+        
+        '新手任务商店
+        If 找色(581, 380, 623, 444, "000F32", "6|3|49E3F0,12|4|45E1F0,19|3|000F32", "商店") = 1 Then 
+            Delay 随机数(2000, 1000)
+            触摸_随机点 589,436, 599,446 '点击商店             
+            Delay 随机数(2000, 1000)
+            通用点击 260, 215, 312, 278, "Attachment:魔灵阵.png"
+            Delay 随机数(2000, 1000)
+            通用点击 230, 321, 284, 386, "Attachment:购买.png"
+            Delay 随机数(2000, 1000)
+            通用点击 235, 265, 283, 308, "Attachment:是1.png"
+            Delay 随机数(2000, 1000)
+            确认到达 504, 442, 564, 479, "Attachment:确认3.png"
+            Delay 随机数(3000, 2000)
+            Swipe 311, 239, 152, 185, 500
+            Delay 随机数(2000, 1000) 	
+            通用点击 504, 442, 564, 479, "Attachment:确认4.png"
+            Delay 随机数(2000, 1000)  
+        End If 
+        
+        '新手任务强化
+        If 找色(440, 385, 483, 434, "000F32", "6|3|49E3F0,12|4|45E1F0,19|3|000F32","强化") = 1 Then 
+            Delay 随机数(2000, 1000)
+            If 找图(434, 440, 488, 479, "强化3") = 1 Then '确认找到箭头处是强化菜单 
+                触摸_随机点 453,438, 463,448 '点击强化             
+                Delay 随机数(2000, 1000)
+                确认到达 475, 48, 561, 98, "Attachment:强化阵.png"
+                Delay 随机数(2000, 1000)
+                触摸_随机点 493, 146, 503, 156 '第一行第二个
+                Delay 随机数(2000, 1000)
+                触摸_随机点 418, 226, 428, 236 '第二行第一个
+                Delay 随机数(2000, 1000)
+                通用点击 63, 380, 125, 433, "Attachment:强化2.png"
+                Delay 随机数(2000, 1000)
+                通用点击 224, 248, 294, 323, "Attachment:是.png"
+                Delay 随机数(2000, 1000)
+                触摸_随机点 557, 432, 567, 433 'skip
+                Delay 随机数(2000, 1000)
+                通用点击 462, 324, 534, 408, "Attachment:确认1.png"
+            End If
+        End If
+        
+        If 找色(21, 349, 58, 398, "000F32", "6|3|49E3F0,12|4|45E1F0,19|3|000F32","加化丛林") = 1 Then 
+            Delay 随机数(2000, 1000)
+            触摸_随机点 29, 411, 39, 412
+            Delay 随机数(2000, 1000)
+            Swipe 194, 465, 311, 16, 200 '移动新手村
+            Delay 随机数(2000, 1000)
+            Exit Do 
+        End If
+        
+        出错倒计时 "新手任务"
+    Loop
+End Sub
+
+Sub 战斗
+    TracePrint "战斗..."
+    加仑丛林 
+    西泽山 
+    卡菲勒遗址 
+    卡伊洛斯地下城
+End Sub
+
+
+Sub 卡伊洛斯地下城
+    TracePrint "卡伊洛斯地下城..."
+    巨人地下城 
+    龙之地下城 
+    死亡地下城
+End Sub
+
+
+///卡伊洛斯地下城过图////////////////////
+
+Sub 死亡地下城
+    TracePrint "死亡地下城"
+    Do
+        If 找图(127, 281, 204, 354, "死亡地下城") = 1 Then 
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)			
+        End If
+        If 找图(500, 186, 578, 399, "未解锁") = 1 Then 
+            Exit Do 	
+        End If
+        出错倒计时 "死亡地下城"	
+    Loop
+	
+    卡伊洛斯地下城过图
+End Sub
+
+
+Sub 龙之地下城
+    TracePrint "龙之地下城..."
+    Do
+        If 找图(119, 222, 209, 280, "龙之地址城") = 1 Then 
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)			
+        End If
+        If 找图(500, 186, 578, 399, "未解锁") = 1 Then 
+            Exit Do 	
+        End If
+        出错倒计时 "龙之地下城"
+    Loop
+    
+    卡伊洛斯地下城过图
+End Sub
+
+
+Sub 巨人地下城
+    TracePrint "巨人地下城..."  
+    Do
+        If 找图(301, 438, 347, 479, "战斗2") = 1 Then '主界面的战斗菜单
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)    		
+        End If
+        If 找图(369,384,420,428,"卡伊洛") = 1 Then '点击地图
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)    		
+        End If
+        If 找图(504,131,575,426,"战4") = 1 Then            
+            Delay 随机数(2000, 1000)
+            Exit Do 
+        End If
+        出错倒计时 "巨人地下城"
+    Loop
+    
+    卡伊洛斯地下城过图
+End Sub
+
+
+Sub 卡伊洛斯地下城过图
+    TracePrint "卡伊洛斯地下城过图"
+    For xx = 1 To 10 
+        For 10
+            TracePrint xx
+            FindPic 361,142,440,431,"Attachment:地下"&xx&".png","101010",2,0.65,intX,intY
+            If intX > -1 And intY > -1 Then
+                TracePrint "找到战斗",xx
+                触摸_随机点 540, intY + 10, 530, intY
+                Delay 随机数(2000, 1000)
+                Do
+                    If 找图(492, 318, 591, 388, "开始战斗1") = 1 Then             
+                        触摸_随机点 x + 10, y + 10, x, y
+                        Delay 随机数(6000, 4000)			
+                    End If
+                    If 找图(487, 322, 557, 386, "未开始战斗") = 1 Then 
+                        Delay 随机数(2000, 1000)
+                        触摸_随机点 30, 324, 40, 334
+                        Delay 随机数(2000, 1000)
+                        触摸_随机点 96, 325, 106, 335
+                        Delay 随机数(2000, 1000)
+                        触摸_随机点 156, 322, 166, 332
+                        Delay 随机数(2000, 1000)
+                        触摸_随机点 216, 327, 226, 337
+                        Delay 随机数(2000, 1000)
+                        触摸_随机点 281, 322, 291, 332
+                        Delay 随机数(2000, 1000)                    
+                    End If               
+                    If 找图(273, 245, 356, 336, "确认2") = 1 Then 
+                        触摸_随机点 x + 10, y + 10, x, y                    
+                        Delay 随机数(2000, 1000)
+                    End If
+                    If 找图(409, 222, 492, 298, "停止") = 1 Then 
+                        触摸_随机点 x + 10, y + 10, x, y
+                        Delay 随机数(2000, 1000)
+                        Exit For  
+                    Else 
+                        触摸_随机点 287, 361, 297, 371
+                        Delay 随机数(2000, 1000)		
+                    End If
+                    出错倒计时 "巨人地下城"              
+                Loop            
+            End If
+            Delay 1000
+        Next 
+    Next 
+End Sub
+
+///卡菲勒遗址过图////////////////////
+Sub 卡菲勒遗址
+    TracePrint "卡菲勒遗址..."
+    Do
+        If 找图(301, 438, 347, 479, "战斗2") = 1 Then '主界面的战斗菜单
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)    		
+        End If
+        If 找图(367,200,423,254,"卡菲勒遗址") = 1 Then '点击地图
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)    		
+        End If
+        If 找图(417,37,477,103,"卡菲勒遗址1") = 1 Then
+            Swipe 498, 181, 496, 313, 200
+            Delay 随机数(2000, 1000)
+        Else 
+            触摸_随机点 395, 214, 405, 224
+            Delay 随机数(2000, 1000)
+        End If
+        If 找图(403,141,483,194,"1层") = 1 Then 
+            Delay 随机数(2000, 1000)
+            If 找图(553, 165, 614, 217, "战斗3") = 1 Then
+                触摸_随机点 x + 10, y + 10, x, y
+                Delay 随机数(2000, 1000)
+                Exit Do 
+            End If 
+        End If
+        出错倒计时 "卡菲勒遗址"
+    Loop
+   
+    Do
+        If 找图(492, 318, 591, 388, "开始战斗1") = 1 Then             
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(6000, 4000)			
+        End If
+        If 找图(487, 322, 557, 386, "未开始战斗") = 1 Then 
+            Delay 随机数(2000, 1000)
+            触摸_随机点 30, 324, 40, 334
+            Delay 随机数(2000, 1000)
+            触摸_随机点 96, 325, 106, 335
+            Delay 随机数(2000, 1000)
+        End If
+        If 找图(382, 223, 474, 296, "下个关卡") = 1 Then 
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)
+        Else 
+            触摸_随机点 287, 361, 297, 371
+            Delay 随机数(2000, 1000)		
+        End If
+        If 找图(230, 254, 285, 317, "是") = 1 Then 
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)        	
+        End If
+        If 找图(301, 438, 347, 479, "战斗2") = 1 Then '主界面的战斗菜单            
+            Delay 随机数(2000, 1000)
+            Exit Do    		
+        End If
+        出错倒计时 "卡菲勒遗址战斗"                    
+    Loop
+End Sub
+
+
+///西泽山过图////////////////////
+Sub 西泽山
+    TracePrint "西泽山..."
+    Do
+        If 找图(301, 438, 347, 479, "战斗2") = 1 Then '主界面的战斗菜单
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)    		
+        End If
+        If 找图(260,171,333,243,"西泽山") = 1 Then '点击地图
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)    		
+        End If
+        If 找图(434,47,519,95,"西泽山1") = 1 Then
+            Swipe 498, 181, 496, 313, 200
+            Delay 随机数(2000, 1000)
+        Else 
+            触摸_随机点 395, 214, 405, 224
+            Delay 随机数(2000, 1000)
+        End If
+        If 找图(403,141,483,194,"1层") = 1 Then 
+            Delay 随机数(2000, 1000)
+            If 找图(553, 165, 614, 217, "战斗3") = 1 Then
+                触摸_随机点 x + 10, y + 10, x, y
+                Delay 随机数(2000, 1000)
+                Exit Do 
+            End If 
+        End If
+        出错倒计时 "西泽山"
+    Loop
+   
+    Do
+        If 找图(492, 318, 591, 388, "开始战斗1") = 1 Then 
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(6000, 4000)			
+        End If
+        If 找图(382, 223, 474, 296, "下个关卡") = 1 Then 
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)
+        Else 
+            触摸_随机点 287, 361, 297, 371
+            Delay 随机数(2000, 1000)		
+        End If
+        If 找图(230, 254, 285, 317, "是") = 1 Then 
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)        	
+        End If
+        If 找图(487, 322, 557, 386, "未开始战斗") = 1 Then 
+            Delay 随机数(2000, 1000)
+            触摸_随机点 30, 324, 40, 334
+            Delay 随机数(2000, 1000)
+            触摸_随机点 96, 325, 106, 335
+            Delay 随机数(2000, 1000)
+        End If
+        If 找图(301, 438, 347, 479, "战斗2") = 1 Then '主界面的战斗菜单            
+            Delay 随机数(2000, 1000)
+            Exit Do    		
+        End If
+        出错倒计时 "西泽山战斗"
+    Loop
+End Sub
+
+
+///加仑丛林过图////////////////////
+Sub 加仑丛林
+    TracePrint "加仑丛林..."
+    
+    Do
+        If 找图(301, 438, 347, 479, "战斗2") = 1 Then '主界面的战斗菜单
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)    		
+        End If
+        If 找图(126, 226, 229, 299, "加仑丛林") = 1 Then '点击地图
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)    		
+        End If
+        If 找图(457, 41, 528, 108, "丛林") = 1 Then
+            Swipe 498, 181, 496, 313, 200
+            Delay 随机数(2000, 1000)
+        Else 
+            触摸_随机点 395, 214, 405, 224
+            Delay 随机数(2000, 1000)
+        End If
+        If 找图(426, 139, 486, 188, "外围") = 1 Then 
+            Delay 随机数(2000, 1000)
+            If 找图(553, 165, 614, 217, "战斗3") = 1 Then
+                触摸_随机点 x + 10, y + 10, x, y
+                Delay 随机数(2000, 1000)
+                Exit Do 
+            End If 
+        End If
+        出错倒计时 "加仑丛林"
+    Loop
+   
+    Do
+        If 找图(492, 318, 591, 388, "开始战斗1") = 1 Then 
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(6000, 4000)			
+        End If
+        If 找图(382, 223, 474, 296, "下个关卡") = 1 Then 
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)
+        Else 
+            触摸_随机点 287, 361, 297, 371
+            Delay 随机数(2000, 1000)		
+        End If
+        If 找图(230, 254, 285, 317, "是") = 1 Then 
+            触摸_随机点 x + 10, y + 10, x, y
+            Delay 随机数(2000, 1000)        	
+        End If
+        If 找图(487, 322, 557, 386, "未开始战斗") = 1 Then 
+            Delay 随机数(2000, 1000)
+            触摸_随机点 30, 324, 40, 334
+            Delay 随机数(2000, 1000)
+            触摸_随机点 96, 325, 106, 335
+            Delay 随机数(2000, 1000)
+        End If        
+        If 找图(301, 438, 347, 479, "战斗2") = 1 Then '主界面的战斗菜单            
+            Delay 随机数(2000, 1000)
+            Exit Do    		
+        End If
+        出错倒计时 "加仑丛林战斗"      
+    Loop
+End Sub
+
+
+
+
+
+Sub 任务提示_找色(x1, y1, x2, y2, color,color1,item)
+    If 找色(x1, y1, x2, y2, color,color1,item) = 1 Then 
+        触摸_随机点 x + 10, y + 10, x, y
+        Delay 随机数(2000, 1000)			
+    End If	
+End Sub
+
+
+Function 找图(x1, y1, x2, y2, pic)
+    FindPic x1, y1, x2, y2, "Attachment:" & pic & ".png", "101010", 0, 0.80, x, y    
+    If x > -1 And y > -1 Then        
+        TracePrint  "找到了图片..." & pic
+        i = 0      
+        找图 = 1
+    Else 
+        TracePrint  "没有找到图片..." & pic
+        找图 = 0		
+    End If
+    Delay 50
+End Function
+
+Function 找色(x1, y1, x2, y2, color,color1,item)
+    FindMultiColor x1, y1, x2, y2, color, color1, 0, 0.9, x, y    
+    If x > -1 And y > -1 Then
+        TracePrint "找到了颜色...",item,x,y        
+        i = 0
+        找色 = 1
+    Else 
+        TracePrint "没有找到颜色...",item
+        找色 = 0
+    End If
+    Delay 100
+End Function
+
+Function 随机数(M,X)
+    Dim MyValue
+    Randomize //随机数种子
+    MyValue = Int(((M-X+1) * Rnd()) + X)   
+    随机数= MyValue
+End Function
+
+Function 触摸_随机点(x,y,x1,y1)    
+    Dim x范围 = 随机数(x1,x)
+    Dim y范围 = 随机数(y1,y)
+    触摸_点 x范围, y范围    
+End Function
+
+Function 触摸_点(x,y)
+    TracePrint "触摸_点...",x,y
+    Tap x, y
+    Delay 10
+End Function
+
+//通用模块///////////////////////////////////////////
+/////////////////////////////////////////////////////
+
+
+
+
+
+Function 出错倒计时(pic)
+    TracePrint "出错倒计时..."&pic	 
+    i = i + 1                
+    If i = 60 Then   
+        Error pic
+    End If  
+    If i > 60 Then 
+        ShowMessage 120 - i & "秒后进入错误处理"	
+    End If
+    If 找图(312, 197, 426, 262, "停止运行") = 1 Then 
+        If 找图(409, 243, 500, 324, "确定_停止运行") = 1 Then 
+            Delay 1000
+            Tap x, y
+            Delay 1000
+        	Error "停止运行"
+        End If
+    End If
+    If 找图(142, 326, 218, 398, "游戏崩溃了") = 1 Then 
+        Delay 1000
+        Tap x, y
+        Delay 1000
+        Error "游戏崩溃了"    	
+    End If
+    '魔灵宝贝无响应
+    If 找图(201, 149, 323, 274, "无响应") = 1 Then 
+        If 找图(411, 244, 511, 380, "确定_无响应") = 1 Then 
+            Delay 1000
+            Tap x, y
+            Delay 1000
+        End If
+        Error "停止运行"
+    End If
+    Delay 500
+End Function
+
+Function 通用点击(x1, y1, x2, y2, pic)      
+    Dim MyValue=False     
+    Do
+        FindPic x1, y1, x2, y2, pic, "101010", 0, 0.85, intX, intY        
+        If intX > -1 And intY > -1 Then
+            TracePrint "找到图片并点击...",pic,intX,intY
+            Delay 200     
+            触摸_随机点 intX + 5, intY + 5, intX, intY                               
+            MyValue = True             
+            Delay 随机数(2000, 1000)             
+        ElseIf MyValue = True Then               
+            i = 0            
+            Exit Do 
+        End If
+        出错倒计时 pic
+    Loop
+End Function
+
+Function 单次点击(x1, y1, x2, y2, pic)      
+    Dim MyValue=False     
+    Do
+        FindPic x1, y1, x2, y2, pic, "101010", 0, 0.85, intX, intY        
+        If intX > -1 And intY > -1 Then
+            i = 0       
+            触摸_随机点 intX + 5, intY + 5, intX, intY 
+            Delay 随机数(2000, 1000) 
+            Exit Do 
+        End If
+        出错倒计时 pic
+    Loop
+End Function
+
+
+Function 确认到达(x1, y1, x2, y2, pic)
+    TracePrint "进入确认到达..."&pic   
+    Dim ReTurn=False 
+    Do 
+        ReTurn = FindPic(x1, y1, x2, y2, pic, "101010", 0, 0.9, intX, intY)               
+        If intX > -1 And intY > -1 Then 
+            TracePrint "已确认到达..."&pic
+            i = 0
+            ReTurn = True 
+            确认到达 = ReTurn                   
+            Exit Do 
+        End If      
+        出错倒计时 pic      
+    Loop
+End Function
+
+
+Function 随机数字(位数)
+    Dim i,位置,字符串,数字
+    数字="0123456789"
+    字符串=""
+    For i = 0 To 位数 - 1
+        位置 = Int((Len(数字) * Rnd()) + 1)
+        字符串 = 字符串 & Mid(数字,位置,1)
+    Next
+    随机数字 = 字符串
+    TracePrint 字符串
+End Function
+
+    
+Function 随机字符串(位数)
+    Dim i,位置,字符串,字母
+    字母="abcdefghijklmnopqrstuvwxyz"
+    字符串=""
+    For i = 0 To 位数 - 1
+        位置 = Int((Len(字母) * Rnd()) + 1)
+        字符串 = 字符串 & Mid(字母,位置,1)
+    Next
+    随机字符串 = 字符串
+End Function
+    
+Function Error(pic) //错误处理    
+    TracePrint "进入错误处理..."&pic    
+    i = 0    
+    KillApp "cn.miyugame.mlzh.lehaihai"
+    Delay 3000
+    KeyPress "home"
+    Delay 2000
+    main 
+End Function
+
+
+
+/*
+
+//以下为百宝云变量----------------------------//
+Function 心跳()	
+    TracePrint "剩余分钟：" & bbyreg.函数_获取心跳剩余分钟()    
+    //以下这个判断是配合心跳线程，来检查运行中，注册码的状态，请确保在你的功能循环中有被执行一次。
+    //到期了或被顶号或异常，结束脚本（确保每次脚本循环执行一次判断）
+    If bbyreg.函数_获取心跳剩余分钟() <= 0 Then 
+        TracePrint "停止原因：" & bbyreg.变量_错误信息
+        Thread.Stop 信息线程ID//养成良好习惯结束线程，虽然按键本身会自动结束
+        EndScript//停止脚本
+    End If	
+End Function
+EndScript//停止脚本
+///////////////////////////////////////////////////////////////////
+//功能模块区域
+Sub 执行注册验证显示()
+    //可在注册成功后,获取显示给用户看,不用可注释掉
+    //验证注册,获取注册码详细信息
+    Dim 返回值 = bbyreg.函数_获取注册码验证()
+    //返回:激活时间|到期时间|登陆时间|验证时间
+    If 返回值 = "" Then
+        //获取验证信息失败
+        TracePrint bbyreg.变量_错误信息
+        ShowMessage bbyreg.变量_错误信息
+        Delay 2000
+        EndScript//停止脚本
+    Else
+        //验证成功显示内容
+        TracePrint "激活时间：" & bbyreg.变量_激活时间
+        TracePrint "到期时间：" & bbyreg.变量_到期时间
+        TracePrint "登录时间：" & bbyreg.变量_登录时间
+        TracePrint "验证时间：" & bbyreg.变量_验证时间
+        ShowMessage 返回值
+        Delay 2000
+    End If
+End Sub
+///////////////////////////////////////////////////////////////////
+Sub 执行心跳线程(间隔)
+    //按键的规则机制，命令库的Sub或Fun不可直接作为子线程来启动
+    //所以先在主脚本启动一个Sub子线程，在该Sub中直接跳转命令库中写好的心跳Sub。
+    //Ctrl+左键，可跳转查看源码
+    Call bbyreg.函数_执行心跳检测(间隔)//间隔推荐480秒，8分钟。
+    //心跳是每隔一段时间，获取一次注册码状态，如到期了或设置了顶号停止。
+End Sub
+
+*/

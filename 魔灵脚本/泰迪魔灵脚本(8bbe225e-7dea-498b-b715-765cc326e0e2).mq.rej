@@ -1,0 +1,27 @@
+diff a/魔灵脚本/泰迪魔灵脚本(8bbe225e-7dea-498b-b715-765cc326e0e2).mq b/魔灵脚本/泰迪魔灵脚本(8bbe225e-7dea-498b-b715-765cc326e0e2).mq	(rejected hunks)
+@@ -3190,15 +3190,17 @@
+             Else 
+                 ShowMessage "�����°汾,��ʼ����~"
+                 TracePrint "�����°汾,��ʼ����~"
+-                //���°汾
+-                Delay 2000
+-                ShowMessage "���������������ɺ�����֪ͨ����ɰ�װ~"
+-                zm.OpenURL link
++                Dim updatePath = dirPath & "taidi.apk"
++                
++                //TODO������Ҫ����һ�����ؽ��ȵ����߳�
++                
++                zm.HttpDownload link, updatePath
++                
++                Call ShanHai.Install(updatePath)
+ 
+-                Delay 1000
+-                Dialog.MsgBox "��������:\n" & detail & "\n��������:" & "\n- ��������ҳ���е����ذ�ť��ʼ����\n- ��ɺ�����֪ͨ�������װ\n��û�п�ʼ�Զ�����," & errorStr, 0
+-                endReason = "�����°汾~"
+-                stopTheScript
++               
++//                endReason = "�����°汾~"
++//                stopTheScript
+             End If
+ 
+         Else     
