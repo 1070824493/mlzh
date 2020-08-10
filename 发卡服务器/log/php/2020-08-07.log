@@ -1,0 +1,56 @@
+[07-Aug-2020 23:44:56 Asia/Chongqing] PHP Fatal error:  Uncaught Yaf\Exception\LoadFailed\View: Failed opening template /www/wwwroot/antme.ml/templates/hyacinth/error/error.html: No such file or directory in /www/wwwroot/antme.ml/public/index.php:12
+Stack trace:
+#0 [internal function]: Yaf\View\Simple->render('error/error.htm...')
+#1 [internal function]: Yaf\Controller_Abstract->render('error')
+#2 /www/wwwroot/antme.ml/public/index.php(12): Yaf\Application->run()
+#3 {main}
+  thrown in /www/wwwroot/antme.ml/public/index.php on line 12
+[07-Aug-2020 23:45:01 Asia/Chongqing] PHP Fatal error:  Uncaught Yaf\Exception\LoadFailed\View: Failed opening template /www/wwwroot/antme.ml/templates/hyacinth/error/error.html: No such file or directory in /www/wwwroot/antme.ml/public/index.php:12
+Stack trace:
+#0 [internal function]: Yaf\View\Simple->render('error/error.htm...')
+#1 [internal function]: Yaf\Controller_Abstract->render('error')
+#2 /www/wwwroot/antme.ml/public/index.php(12): Yaf\Application->run()
+#3 {main}
+  thrown in /www/wwwroot/antme.ml/public/index.php on line 12
+[07-Aug-2020 23:47:00 Asia/Chongqing] PHP Fatal error:  Uncaught Yaf\Exception\LoadFailed\View: Failed opening template /www/wwwroot/antme.ml/templates/hyacinth/error/error.html: No such file or directory in /www/wwwroot/antme.ml/public/index.php:12
+Stack trace:
+#0 [internal function]: Yaf\View\Simple->render('error/error.htm...')
+#1 [internal function]: Yaf\Controller_Abstract->render('error')
+#2 /www/wwwroot/antme.ml/public/index.php(12): Yaf\Application->run()
+#3 {main}
+  thrown in /www/wwwroot/antme.ml/public/index.php on line 12
+[07-Aug-2020 23:47:01 Asia/Chongqing] PHP Fatal error:  Uncaught Yaf\Exception\LoadFailed\View: Failed opening template /www/wwwroot/antme.ml/templates/hyacinth/error/error.html: No such file or directory in /www/wwwroot/antme.ml/public/index.php:12
+Stack trace:
+#0 [internal function]: Yaf\View\Simple->render('error/error.htm...')
+#1 [internal function]: Yaf\Controller_Abstract->render('error')
+#2 /www/wwwroot/antme.ml/public/index.php(12): Yaf\Application->run()
+#3 {main}
+  thrown in /www/wwwroot/antme.ml/public/index.php on line 12
+[07-Aug-2020 23:47:01 Asia/Chongqing] PHP Fatal error:  Uncaught Yaf\Exception\LoadFailed\View: Failed opening template /www/wwwroot/antme.ml/templates/hyacinth/error/error.html: No such file or directory in /www/wwwroot/antme.ml/public/index.php:12
+Stack trace:
+#0 [internal function]: Yaf\View\Simple->render('error/error.htm...')
+#1 [internal function]: Yaf\Controller_Abstract->render('error')
+#2 /www/wwwroot/antme.ml/public/index.php(12): Yaf\Application->run()
+#3 {main}
+  thrown in /www/wwwroot/antme.ml/public/index.php on line 12
+[07-Aug-2020 23:47:01 Asia/Chongqing] PHP Fatal error:  Uncaught Yaf\Exception\LoadFailed\View: Failed opening template /www/wwwroot/antme.ml/templates/hyacinth/error/error.html: No such file or directory in /www/wwwroot/antme.ml/public/index.php:12
+Stack trace:
+#0 [internal function]: Yaf\View\Simple->render('error/error.htm...')
+#1 [internal function]: Yaf\Controller_Abstract->render('error')
+#2 /www/wwwroot/antme.ml/public/index.php(12): Yaf\Application->run()
+#3 {main}
+  thrown in /www/wwwroot/antme.ml/public/index.php on line 12
+[07-Aug-2020 23:47:01 Asia/Chongqing] PHP Fatal error:  Uncaught Yaf\Exception\LoadFailed\View: Failed opening template /www/wwwroot/antme.ml/templates/hyacinth/error/error.html: No such file or directory in /www/wwwroot/antme.ml/public/index.php:12
+Stack trace:
+#0 [internal function]: Yaf\View\Simple->render('error/error.htm...')
+#1 [internal function]: Yaf\Controller_Abstract->render('error')
+#2 /www/wwwroot/antme.ml/public/index.php(12): Yaf\Application->run()
+#3 {main}
+  thrown in /www/wwwroot/antme.ml/public/index.php on line 12
+[07-Aug-2020 23:47:09 Asia/Chongqing] PHP Fatal error:  Uncaught Yaf\Exception\LoadFailed\View: Failed opening template /www/wwwroot/antme.ml/templates/hyacinth/error/error.html: No such file or directory in /www/wwwroot/antme.ml/public/index.php:12
+Stack trace:
+#0 [internal function]: Yaf\View\Simple->render('error/error.htm...')
+#1 [internal function]: Yaf\Controller_Abstract->render('error')
+#2 /www/wwwroot/antme.ml/public/index.php(12): Yaf\Application->run()
+#3 {main}
+  thrown in /www/wwwroot/antme.ml/public/index.php on line 12
