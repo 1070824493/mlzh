@@ -4,6 +4,9 @@ Import "ShanHai.lua"
 Import "zm.luae" //导入插件,只需执行一次
 zm.Init()  //初始化插件,只需执行一次
 zm.InitBase64 
+
+Dim currentVersion = 17	//当前版本号
+
 Dim regToken = ""	//答题识别token
 //初始化答题识别器
 If Not zm.OcrBaiDuInit("yBqfGocbuDs4GlpO3TVyiczR", "cIZz2D3QUSRztn1tGUUoPP6234XoGELP") Then
@@ -204,10 +207,6 @@ Dim isScrollEnd = False	//换狗粮时是否已经滑动到最右
 
 Dim currentTimeResult = True 	//当前一把是赢还是输
 Dim intP,intQ	//自定义找图返回坐标
-
-
-Dim currentVersion = 14	//当前版本号
-
 
 
 判断文件
@@ -530,6 +529,19 @@ Function 找图(x1, y1, x2, y2, pic)
 
 End Function
 
+Function 超级找图(x1, y1, x2, y2, picName)
+	Dim fullName = picName & ".bmp"
+	dim ret = zm.FindPic(x1,y1,x2,y2,fullName,"101010","右下",0.9,1000,返回数组)
+	If ret Then 
+		TracePrint "找到序号" & 返回数组["id"], "x=" & 返回数组["x"], "y=" & 返回数组["y"], "图片名=" & 返回数组["name"]
+		x = 返回数组["x"]
+		y = 返回数组["y"]
+		超级找图 = 1
+	Else 
+//		TracePrint "没有找到：" & fullName
+		超级找图 = 0
+	End If
+End Function
 
 Function 找色(x1, y1, x2, y2, desc)
 
@@ -619,18 +631,7 @@ Function 比例比色(arr)
 
 End Function
 
-Function 找字(x1, y1, x2, y2, txt,color)
 
-    FindStr(x1, y1, x2, y2,txt,color,0.8,x,y)
-    If x > -1 And y > -1 Then
-        TracePrint "找到:" & txt
-        找字 = 1    
-    Else 
-        //    	TracePrint "没找到:" & txt
-        找字 = 0        
-    End If
-
-End Function
 
 Function 随机数(M,X)
     Dim MyValue
@@ -906,7 +907,7 @@ Function 地下城循环
             Goto loading
         End If
         
-        If 比例找色(再来一次) = 1 or 比例找色(战斗准备) = 1 Then 
+        If 超级找图(292,270,363,538, "战斗准备") = 1 and 超级找图(292,270,363,538, "体力图片") = 1 or 比例找色(再来一次) = 1 Then 
             judgeTimes
             比例触摸_随机点 308,269,346,538	//点再来一次
             smallBoss = false
@@ -942,14 +943,23 @@ Function 地下城循环
         
         If 比例找色(失败) = 1 Then 
             比例触摸_随机点 295,231,364,583	//翻车点击否后会出现,随机点再来一次
-            failure = failure + 1
-            isFailed = True
             Goto loading
         End If
         
-        If 比例找色(翻车) = 1 Then 
-            比例触摸_随机点 227,735,272,909	//翻车点击否	
-            //            failure = failure + 1
+        
+//        If 比例找色(翻车) = 1 Then 
+//            比例触摸_随机点 227,735,272,909	//翻车点击否	
+//            isFailed = True
+//            failure = failure + 1
+//            judgeTimes
+//            Goto loading
+//        End If
+        
+        If 超级找图(218,345,283,566, "复活") = 1 and 超级找图(218,345,283,566, "复活数字10") = 1 and 超级找图(218,345,283,566, "复活红水晶") = 1 Then 
+        	比例触摸_随机点 227,735,272,909	//翻车点击否	
+            isFailed = True
+            failure = failure + 1
+            judgeTimes
             Goto loading
         End If
         
@@ -1046,6 +1056,7 @@ Function 爬塔循环
         If 比例找色(失败) = 1 Then 
             比例触摸_随机点 295,231,364,583	//翻车点击否后会出现,随机点再来一次
             failure = failure + 1
+            judgeTimes
             Goto loading
         End If
         
@@ -1092,7 +1103,7 @@ Function 竞技场循环
         End If
         
         
-        If 比例找色(翅膀) = 1 or 比例找色(翅膀反击) = 1 Then 
+        If 超级找图(76,954,587,1098,"竞技场战斗") = 1 or 比例找色(翅膀反击) = 1 Then 
             If isFailed = True Then 
                 //失败了，点击刷新
                 触摸_随机点 532,152,566,255	//点击对战
@@ -1160,6 +1171,8 @@ Function 竞技场循环
             比例触摸_随机点 366, 534, 547, 835
             比例触摸_随机点 366, 534, 547, 835
             isFailed = True
+            failure = failure + 1
+            judgeTimes
         End If
 
         比例判断网络波动
@@ -1256,6 +1269,7 @@ Function 狗粮循环
             比例触摸_随机点 224,731,275,915	//翻车点击否 230,741,267,917
             比例触摸_随机点 224,731,275,915	//翻车点击否 230,741,267,917
             failure = failure + 1
+            judgeTimes
             Goto loading
         End If
         
