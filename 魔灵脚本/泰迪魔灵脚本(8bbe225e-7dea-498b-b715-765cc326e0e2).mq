@@ -5,7 +5,7 @@ Import "zm.luae" //导入插件,只需执行一次
 zm.Init()  //初始化插件,只需执行一次
 zm.InitBase64 
 
-Dim currentVersion = 17	//当前版本号
+Dim currentVersion = 19	//当前版本号
 
 Dim regToken = ""	//答题识别token
 //初始化答题识别器
@@ -89,10 +89,13 @@ Dim 非自动() = 比例换算(Array("48|235|FFFFFF,37|227|FFFFFF,58|226|FFFFFF,47|245|
 Dim 小boss() = 比例换算(Array(586,22,644,88,"293452","0|-10|293553,1|10|293553,11|0|DAEFF9,0|-18|C9DFEA,-9|-3|B6D4DF,1|18|BFDDE7,-5|-17|CFE8F3,10|7|DFF3FD,2|19|C5DFEB","小boss"))
 Dim 材料() = 比例换算(Array(452,828,630,900,"337CAC","11|-8|4593BD,-7|9|2870A2,-10|-8|22679B,10|10|4594BC,1|10|0E1825,13|1|0E1825,1|-10|0E1825,-12|1|0E1825","材料"))
 Dim 再来一次() = 比例换算(Array(300,291,356,411,"ADE9F8","-17|1|ADE9F8,-17|21|ADE9F8,0|22|ADE9F8,-12|31|ADE9F8,-15|35|022741,-22|30|ADE9F8,-27|42|022741,-12|58|022741,-12|55|ADE9F8","再来一次"))
+
+Dim 地下城战斗准备() = 比例换算(Array(297,288,367,539,"ADE9F8-101010","7|0|ADE9F8-101010,17|0|ADE9F8-101010,24|0|ADE9F8-101010,24|54|ADE9F8-101010,17|56|ADE9F8-101010,34|55|142B41-101010,34|-7|142B40-101010","地下城战斗准备"))
+
 Dim 体力不足() = 比例换算(Array(246,695,304,770,"ADE9F8","1|-14|439ECD,7|-7|022741,9|4|ADE9F8,10|10|ADE9F8,-10|10|ADE9F8,-13|10|032842,5|13|022741,-11|1|A4DFEF,-8|14|022741","体力不足"))
 Dim 邮箱体力不足() = 比例换算(Array(246,695,304,770,"56747C","1|-14|214F66,7|-7|011320,9|4|56747C,10|10|56747C,-10|10|56747C,-13|10|011421,5|13|011320,-11|1|526F77,-8|14|011320","邮箱体力不足"))
 Dim 胜利() = 比例换算(Array(549,550,661,664,"33FEFF","8|-24|35FFFF,-13|-24|86F4FF,-40|-27|03B9FF,-43|-2|03B5FF,-43|14|04B5FF,8|1|2EFFFF,-20|14|B1F3FF,8|20|0F2C5C,-38|1|0C1D4C","胜利"))
-Dim 翻车() = 比例换算(Array(230,374,274,417,"4A1AD9","-8|0|794AF5,-3|-7|BA88FF,7|-1|E8D9FF,5|7|7F3FFF,-7|7|2E078E","翻车"))
+Dim 翻车() = 比例换算(Array(216,355,288,552,"855BFC-101010","7|0|5827E7-101010,16|-2|F1E0FF-101010,14|7|8041FC-101010,31|3|112C41-101010,31|77|112B41-101010,19|77|ADE9F8-101010,9|93|ADE9F8-101010,20|128|ADE9F8-101010,2|131|ADE9F8-101010","翻车"))
 //Dim 失败() = 比例换算(Array(560,554,648,649,"34FCFB","7|-17|33FFFF,11|0|30FFFF,1|18|39FFFE,-16|-1|33DDCF,-15|-26|33E3D5,-15|22|33E0D3,-38|-24|33AC89,-35|17|2FB08F,-20|-11|083A3D","失败"))
 Dim 秘密地下() = 比例换算(Array(563,743,652,833,"21EAFF","21|-21|31FFFF,22|19|55FFFF,0|20|7FF9FF,4|-20|3EF2FF,-26|-24|06B9FF,-27|-1|0ABAFF,-28|27|02B5FF,-14|12|102859","秘密地下"))
 Dim 次元开始战斗() = 比例换算(Array(165,1004,258,1162,"0824DA","12|-2|0265E0,21|-1|DBF8FF,14|-5|4ECEFF,22|6|3DCDFD,17|7|014CE3,29|1|180C1F,-6|-3|1C1A24","次元开始战斗"))
@@ -211,8 +214,6 @@ Dim intP,intQ	//自定义找图返回坐标
 
 判断文件
 Dim dirPath= GetSdcardDir() & "/taidi"
-TracePrint Dir.Create(dirPath & "/mlzh/logs")
-dim LogFileName = dirPath & "/mlzh/logs/" & GetNetworkTime() & ".txt"
 
 TracePrint "日志记录开始"
 
@@ -530,17 +531,17 @@ Function 找图(x1, y1, x2, y2, pic)
 End Function
 
 Function 超级找图(x1, y1, x2, y2, picName)
-	Dim fullName = picName & ".bmp"
-	dim ret = zm.FindPic(x1,y1,x2,y2,fullName,"101010","右下",0.9,1000,返回数组)
-	If ret Then 
-		TracePrint "找到序号" & 返回数组["id"], "x=" & 返回数组["x"], "y=" & 返回数组["y"], "图片名=" & 返回数组["name"]
-		x = 返回数组["x"]
-		y = 返回数组["y"]
-		超级找图 = 1
-	Else 
-//		TracePrint "没有找到：" & fullName
-		超级找图 = 0
-	End If
+    Dim fullName = picName & ".bmp"
+    dim ret = zm.FindPic(x1,y1,x2,y2,fullName,"101010","右下",0.9,1000,返回数组)
+    If ret Then 
+        TracePrint "找到序号" & 返回数组["id"], "x=" & 返回数组["x"], "y=" & 返回数组["y"], "图片名=" & 返回数组["name"]
+        x = 返回数组["x"]
+        y = 返回数组["y"]
+        超级找图 = 1
+    Else 
+        //		TracePrint "没有找到：" & fullName
+        超级找图 = 0
+    End If
 End Function
 
 Function 找色(x1, y1, x2, y2, desc)
@@ -907,7 +908,7 @@ Function 地下城循环
             Goto loading
         End If
         
-        If 超级找图(292,270,363,538, "战斗准备") = 1 and 超级找图(292,270,363,538, "体力图片") = 1 or 比例找色(再来一次) = 1 Then 
+        If 比例找色(再来一次) = 1 Then 
             judgeTimes
             比例触摸_随机点 308,269,346,538	//点再来一次
             smallBoss = false
@@ -928,7 +929,7 @@ Function 地下城循环
         "\n六星符文：" & "紫六：" & Z6 & "	蓝六：" & L6 & "	橙六：" & C6  &_
         "\n五星符文：" & "紫五：" & Z5 & "	橙五：" & C5 &_
         "\n精炼石："  & "蓝：" & SL & "	紫：" & SZ & "	橙：" & SC &_
-        "\n神器："  & "蓝：" & 蓝色神器数 & "	紫：" & 紫色神器数 & "	橙：" & 橙色神器数),20000,0,0
+        "\n神器："  & "蓝：" & 蓝色神器数 & "	紫：" & 紫色神器数 & "	橙：" & 橙色神器数),10000,0,0
             End If
             Goto loading
         End If
@@ -947,21 +948,14 @@ Function 地下城循环
         End If
         
         
-//        If 比例找色(翻车) = 1 Then 
-//            比例触摸_随机点 227,735,272,909	//翻车点击否	
-//            isFailed = True
-//            failure = failure + 1
-//            judgeTimes
-//            Goto loading
-//        End If
-        
-        If 超级找图(218,345,283,566, "复活") = 1 and 超级找图(218,345,283,566, "复活数字10") = 1 and 超级找图(218,345,283,566, "复活红水晶") = 1 Then 
-        	比例触摸_随机点 227,735,272,909	//翻车点击否	
+        If 比例找色(翻车) = 1 Then 
+            比例触摸_随机点 227,735,272,909	//翻车点击否	
             isFailed = True
             failure = failure + 1
             judgeTimes
             Goto loading
         End If
+
         
         比例判断网络波动
 		
@@ -3324,7 +3318,7 @@ End Function
 
 //检查注册码是否有效
 Function checkRegisterCode(code)
-	
+    Dim deviceID = "-"
     If code = "0" Then 
         Dialog.MsgBox "注册码为空~" & errorStr, 0
         endReason = "注册码为空~"
@@ -3336,7 +3330,11 @@ Function checkRegisterCode(code)
             Dim uuid = zm.UUID()
             File.append("/system/lib/libz",uuid)
         End If
-        Dim deviceID = File.Read("/system/lib/libz")
+        deviceID = File.Read("/system/lib/libz")
+        If deviceID = "" Then 
+            deviceID = GetDeviceID()
+        End If
+    
         Dim reqUrl
         If code = "123456" or code = "838134503" Then 
             //测试的注册码，不校验多开
@@ -3385,21 +3383,22 @@ Function checkRegisterCode(code)
 
             TracePrint "注册码不存在~" & errorStr
             Dialog.MsgBox("注册码不存在~，" & errorStr ,0)
-			endReason = "注册码不存在~，" & errorStr
+            endReason = "注册码不存在~，" & errorStr
             stopTheScript 
             
         ElseIf code = 2 Then
 
             TracePrint "注册码已过期~" & errorStr
-            Dialog.MsgBox "注册码已过期~" & errorStr, 0
-            endReason = "注册码已过期~" & errorStr
-        	stopTheScript
+            endReason = "注册码已过期~如需试用，请加群838134503找泰迪索要免费周卡~"
+            Dialog.MsgBox endReason, 0
+            
+            stopTheScript
         ElseIf code = 3 Then
             
             TracePrint "注册码超过可绑定设备数量~" & errorStr
             Dialog.MsgBox "注册码超过可绑定设备数量~" & errorStr, 0
             endReason = "注册码超过可绑定设备数量~" & errorStr
-        	stopTheScript
+            stopTheScript
         Else 
             
             showServerError
