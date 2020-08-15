@@ -73,7 +73,7 @@ app.get('/checkCode', function(req, res) {
 							var modSqlParams = "";
 							var type = result[0].Type //获取注册码类型默认为1表示周卡
 
-							//0:天卡, 1:周卡, 2:月卡, 3:季卡, 4:半年卡, 5:年卡
+							//0:天卡, 1:周卡, 2:月卡, 3:季卡, 4:半年卡, 5:年卡, 6: 十年卡
 							switch (type) {
 								case 0:
 									//天卡
@@ -98,6 +98,10 @@ app.get('/checkCode', function(req, res) {
 								case 5:
 									//年卡
 									endTimestamp = startTimestamp + 360 * 60 * 60 * 24 * 1000 //加360天
+									break;
+								case 6:
+									//十年卡
+									endTimestamp = startTimestamp + 360 * 60 * 60 * 24 * 1000 * 10 //加360天 * 10
 									break;
 								default:
 									detail = "不支持的点卡类型~"
@@ -296,6 +300,69 @@ app.get('/checkCode', function(req, res) {
 
 })
 
+//给所有注册码新增时间
+/*
+参数: hour
+*/
+app.get('/addTimeAll',function(req, res)) {
+	res.setHeader('Content-Type', 'text/html; charset=utf8');
+	var code = 999; //状态码
+	var detail = "服务器内部错误";
+	var response;
+	console.log("增加时间传参:" + req.query.hour);
+	var key = req.query.hour;
+	if (key === "" || key === undefined) {
+	
+		response = {
+			code: code,
+			detail: "参数错误"
+		};
+		res.end(JSON.stringify(response));
+		return
+	}
+	pool.getConnection(function(err, connection) {
+		if (err) {
+			console.log(err);
+			code = 999;
+			detail = "database connection error";
+		} else {
+			connection.query('SELECT * FROM `User` WHERE `EndTime` != 0', function(err, result) {
+	
+				if (err) {
+					console.log(err);
+					code = 999;
+					detail = "database query error";
+				} else {
+					detail = "添加失败的记录:"
+					var sql = 'UPDATE User SET EndTime = ? WHERE UserID = ?';
+					result.forEach((item, index)=>{
+						let newEndTime = item.EndTime + key * 3600 * 1000
+						var modSqlParams = [newEndTime, item.UserID];
+					    connection.query(sql, modSqlParams, function(err, result) {
+					        if (err) { 
+					            console.log('UPDATE ERROR - ', err.message);
+					            detail = detail + item.UserID + ","
+					        }
+					    })
+					})
+					code = 0;
+					
+				}
+	
+				response = {
+					code: code,
+					detail: detail
+				};
+				connection.release();
+				res.end(JSON.stringify(response));
+			})
+		}
+	
+	})
+	
+	
+}
+
 //查询当前服务器版本号
 app.get('/getVersion', function(req, res) {
 
@@ -350,7 +417,7 @@ app.get('/downloadApk', function(req, res) {
 	res.download(path,'泰迪新版本.apk');
 })
 
-
+//检查服务器是否正常开启
 app.get('/', function(req, res) {
 	res.write('service start success')
 	res.end()
@@ -573,7 +640,7 @@ app.get('/unbindDevice', function(req, res) {
 							var modSqlParams = "";
 							var type = result[0].Type //获取注册码类型默认为1表示周卡
 
-							//0:天卡, 1:周卡, 2:月卡, 3:季卡, 4:半年卡, 5:年卡, 6:永久卡
+							//0:天卡, 1:周卡, 2:月卡, 3:季卡, 4:半年卡, 5:年卡
 							switch (type) {
 								case 0:
 									//天卡
