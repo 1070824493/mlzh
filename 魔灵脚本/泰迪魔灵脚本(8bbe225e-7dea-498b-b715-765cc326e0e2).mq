@@ -5,7 +5,7 @@ Import "zm.luae" //导入插件,只需执行一次
 zm.Init()  //初始化插件,只需执行一次
 zm.InitBase64 
 
-Dim currentVersion = 21	//当前版本号
+Dim currentVersion = 22	//当前版本号
 
 Dim regToken = ""	//答题识别token
 //初始化答题识别器
@@ -1061,7 +1061,7 @@ Function 竞技场循环
                 End If
                 isFailed = False
             Else
-                触摸_随机点 x, y, x+20, y+20	//开始战斗
+                触摸_随机点 x, y, x+10, y+10	//开始战斗
             End If
             
             Goto loading
@@ -2936,58 +2936,65 @@ Function 画面卡住检测
 	dim ret = "" 
 	
 	ret = zm.OcrBaiDu(626,590,673,686) //找商店
-	If ret = "商店" Then 
+	If IsNull(ret) = False and ret = "商店" Then 
 		RandomClick 621,1178,667,1224	//点击关闭
-		比例判断脚本模式		
+				
 	End If
 	
 	ret = zm.OcrBaiDu(401,466,477,810)	//找是否用红水购买
 	dim 水晶购买 = UTF8.InStr(1, ret, "水晶购买")
-	If 水晶购买 > 0 Then 
+	If IsNumeric(水晶购买) = True And 水晶购买 > 0 Then 
 		RandomClick 259,478,303,586 //点击是
-		比例判断脚本模式
+		
 	End If
     
     ret = zm.OcrBaiDu(406,558,478,722)	//找是否购买完毕
-	If ret = "购买完毕" Then 
+	If IsNull(ret) = False and ret = "购买完毕" Then 
 		RandomClick 262,590,310,685 //点击确认
-		比例判断脚本模式
+		
 	End If
 	
 	ret = zm.OcrBaiDu(212,869,254,1020)	//找突袭主页面（可能断开连接）
-	If ret = "组建队伍" Then 
+	If IsNull(ret) = False and ret = "组建队伍" Then 
 		RandomClick 212,869,254,1020 //点击组建队伍
 		RandomClick 177,581,228,704 //点击确认
-		比例判断脚本模式
+		
 	End If
 	
 	ret = zm.OcrBaiDu(546,538,597,735)	//找魔灵满级弹窗
 	dim 玩家评价 = UTF8.InStr(1, ret, "玩家评价")
-	If 玩家评价 > 0 Then 
+	If IsNumeric(玩家评价) = True And 玩家评价 > 0 Then 
 		RandomClick 540,933,579,969 //点击关闭		
-		比例判断脚本模式
+		
 	End If
 	
 	ret = zm.OcrBaiDu(437,314,506,945)	//找网络卡顿弹窗
 	dim 重新发送 = UTF8.InStr(1, ret, "重新发送")
-	If 重新发送 > 0 Then 
+	If IsNumeric(重新发送) = True And 重新发送 > 0 Then 
 		RandomClick 262,463,309,593 //点击是		
-		比例判断脚本模式
+		
 	End If
 	
 	ret = zm.OcrBaiDu(437,314,506,945)	//找网络卡顿弹窗2
 	dim 连接延迟 = UTF8.InStr(1, ret, "连接延迟")
-	If 连接延迟 > 0 Then 
+	If IsNumeric(连接延迟) = True And 连接延迟 > 0 Then 
 		RandomClick 260,578,313,706 //点击确定	
-		比例判断脚本模式
+		
 	End If
     
     ret = zm.OcrBaiDu(405,465,470,829)	//找突袭连接中断
 	dim 中断 = UTF8.InStr(1, ret, "中断")
-	If 中断 > 0 Then 
+	If IsNumeric(中断) = True And 中断 > 0 Then 
 		RandomClick 261,586,305,695 //点击确定	
 		画面卡住检测		//重新检测突袭入口
 	End If
+	
+	ret = zm.OcrBaiDu(572,550,618,733)	//找异界地下战利品宝箱
+	dim 宝箱 = UTF8.InStr(1, ret, "宝箱")
+	If IsNumeric(宝箱) = True And 宝箱 > 0 Then 
+		RandomClick 104,585,150,698 //点击确定		
+	End If
+	
     
 End Function
 
@@ -3413,15 +3420,15 @@ Sub 卡顿监测线程
 		//取两点颜色 
     
             Dim p1,p2,p3,n1,n2,n3
-            p1 = GetPixelColor(245,320)
-            p2 = GetPixelColor(309,625)
-            p3 = GetPixelColor(464,908)
+            p1 = GetPixelColor(158,392)
+            p2 = GetPixelColor(378,639)
+            p3 = GetPixelColor(505,871)
 
             Delay 15000
             
-            n1 = GetPixelColor(245,320)
-            n2 = GetPixelColor(309,625)
-            n3 = GetPixelColor(464,908)
+            n1 = GetPixelColor(158,392)
+            n2 = GetPixelColor(378,639)
+            n3 = GetPixelColor(505,871)
             If p1 = n1 and p2 = n2 and p3 = n3 Then 
                 //当前已卡住
                 TracePrint "监测到卡顿，即将处理，请勿操作"
