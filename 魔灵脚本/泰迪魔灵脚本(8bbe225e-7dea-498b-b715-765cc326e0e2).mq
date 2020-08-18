@@ -5,10 +5,10 @@ Import "zm.luae" //导入插件,只需执行一次
 zm.Init()  //初始化插件,只需执行一次
 zm.InitBase64 
 
-Dim currentVersion = 22	//当前版本号
+Dim currentVersion = 25	//当前版本号
 
 Dim regToken = ""	//答题识别token
-//初始化答题识别器
+//初始化答题识别器	
 If Not zm.OcrBaiDuInit("yBqfGocbuDs4GlpO3TVyiczR", "cIZz2D3QUSRztn1tGUUoPP6234XoGELP") Then
     TracePrint "初始化答题识别失败"
     endReason = "初始化答题识别器失败"
@@ -380,8 +380,6 @@ Dim findColorSFTb = {_
 
 
 //Dim 颜色数据Tab()'里面只放多点找色的颜色数据的值
-
-
 
 
 //采集魔灵图片
@@ -2643,9 +2641,9 @@ Function judgeQuestion()
     If isQuestionExist() = True Then
         TracePrint "出现了答题"
         dim ret = zm.OcrBaiDu(483,422,546,852)
-        If ret = "" Then 
-            ShowMessage "识别结果异常"
-            TracePrint "识别结果异常"
+        If IsNull(ret) or ret = "" Then 
+            ShowMessage "答题服务器异常"
+            TracePrint "答题服务器异常"
         Else 
             TracePrint "识别结果:" & ret
             ShowMessage "识别结果:" & ret
@@ -2904,23 +2902,22 @@ Function MoveToPointAndTap(x, y,check)
 
     sColor = GetPixelColor(x,y,0)
     //        TracePrint "点击后延时：" & delayTime
-    Dim tryTimes = 0
+    
     If check = True Then 
-        While fColor = sColor
-            tryTimes = tryTimes + 1
-            ShowMessage "网络波动，开始卡顿检测"
-            TracePrint "网络波动，开始卡顿检测"
+        If fColor = sColor Then 
+         
+            ShowMessage "网络波动，触发一次卡顿检测"
+            TracePrint "网络波动，触发一次卡顿检测"
             If type = 3 Then 
-                画面卡住检测 	
-            End If
-            Delay 5000
-            If tryTimes > 1 and not type = 3 Then 
-                
                 画面卡住检测 
+                  Else 
+                Delay 5000
+                 画面卡住检测
             End If
+
             Tap x, y
             sColor = GetPixelColor(x,y,0)
-        Wend
+        End If
         
     End If
  
@@ -3334,8 +3331,8 @@ Function checkRegisterCode(code)
             File.append("/system/lib/libz",uuid)
         End If
         deviceID = File.Read("/system/lib/libz")
-        If deviceID = "" Then 
-            deviceID = GetDeviceID()
+        If IsNull(deviceID) = True or deviceID = "" Then 
+            deviceID = code
         End If
     
         Dim reqUrl
@@ -3382,9 +3379,6 @@ Function checkRegisterCode(code)
             ShowMessage "到期时间：" & endTime
             Delay 2000
             
-            //开启脚本之前，启动一个卡顿监测线程
-            卡顿线程ID = Thread.Start(卡顿监测线程, 1)
-            
             比例判断脚本模式
         ElseIf code = 1 Then
 
@@ -3413,27 +3407,3 @@ Function checkRegisterCode(code)
     End If
 	
 End Function
-
-Sub 卡顿监测线程
-	While 1
-		TracePrint "卡顿监测运行中"
-		//取两点颜色 
-    
-            Dim p1,p2,p3,n1,n2,n3
-            p1 = GetPixelColor(158,392)
-            p2 = GetPixelColor(378,639)
-            p3 = GetPixelColor(505,871)
-
-            Delay 15000
-            
-            n1 = GetPixelColor(158,392)
-            n2 = GetPixelColor(378,639)
-            n3 = GetPixelColor(505,871)
-            If p1 = n1 and p2 = n2 and p3 = n3 Then 
-                //当前已卡住
-                TracePrint "监测到卡顿，即将处理，请勿操作"
-                ShowMessage "监测到卡顿，即将处理，请勿操作"
-                画面卡住检测 
-            End If
-	Wend
-End Sub
