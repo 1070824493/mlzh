@@ -5,7 +5,7 @@ Import "zm.luae" //导入插件,只需执行一次
 zm.Init()  //初始化插件,只需执行一次
 zm.InitBase64 
 
-Dim currentVersion = 25	//当前版本号
+Dim currentVersion = 26	//当前版本号
 
 Dim regToken = ""	//答题识别token
 //初始化答题识别器	
@@ -220,7 +220,7 @@ TracePrint "日志记录开始"
 Dim errorStr = "如有疑问，请加群838134503联系泰迪~"
 Dim endReason = "用户手动停止~"
 Dim json, table, ver,detail,link,code,startTime,endTime
-dim 卡顿线程ID
+dim 卡顿检测次数 = 0
 
 // 黄色差6星
 //"0CD0FD",
@@ -857,7 +857,8 @@ Function 地下城循环
         End If
         
         If 比例找色(再来一次) = 1 Then 
-            judgeTimes
+            judgeTimes 
+            卡顿检测次数 = 0	//找到再来一次，清理卡顿计数
             比例触摸_随机点 308,269,346,538	//点再来一次
             smallBoss = false
             
@@ -2925,6 +2926,10 @@ Function MoveToPointAndTap(x, y,check)
 End Function
 
 Function 画面卡住检测
+    If 卡顿检测次数 > 3 Then 
+    	endReason = "卡顿检测3次失败"
+    	stopTheScript
+    End If
     
     //卡顿检测
     TracePrint("触发卡顿检测")
@@ -2932,66 +2937,71 @@ Function 画面卡住检测
     //识别是否为商店页面
 	dim ret = "" 
 	
+	ret = zm.OcrBaiDu(406,558,478,722)	//找是否购买完毕
+	If IsNull(ret) = False and ret = "购买完毕" Then 
+		比例触摸_随机点 262,590,310,685 //点击确认
+		TracePrint "卡顿检测找到" & ret
+	End If
+	
 	ret = zm.OcrBaiDu(626,590,673,686) //找商店
 	If IsNull(ret) = False and ret = "商店" Then 
-		RandomClick 621,1178,667,1224	//点击关闭
-				
+		比例触摸_随机点 621,1178,667,1224	//点击关闭
+		TracePrint "卡顿检测找到" & ret		
 	End If
 	
 	ret = zm.OcrBaiDu(401,466,477,810)	//找是否用红水购买
 	dim 水晶购买 = UTF8.InStr(1, ret, "水晶购买")
 	If IsNumeric(水晶购买) = True And 水晶购买 > 0 Then 
-		RandomClick 259,478,303,586 //点击是
-		
+		比例触摸_随机点 259,478,303,586 //点击是
+		TracePrint "卡顿检测找到" & ret
 	End If
     
-    ret = zm.OcrBaiDu(406,558,478,722)	//找是否购买完毕
-	If IsNull(ret) = False and ret = "购买完毕" Then 
-		RandomClick 262,590,310,685 //点击确认
-		
-	End If
+    
 	
 	ret = zm.OcrBaiDu(212,869,254,1020)	//找突袭主页面（可能断开连接）
 	If IsNull(ret) = False and ret = "组建队伍" Then 
-		RandomClick 212,869,254,1020 //点击组建队伍
-		RandomClick 177,581,228,704 //点击确认
-		
+		比例触摸_随机点 212,869,254,1020 //点击组建队伍
+		比例触摸_随机点 177,581,228,704 //点击确认
+		TracePrint "卡顿检测找到" & ret
 	End If
 	
 	ret = zm.OcrBaiDu(546,538,597,735)	//找魔灵满级弹窗
 	dim 玩家评价 = UTF8.InStr(1, ret, "玩家评价")
 	If IsNumeric(玩家评价) = True And 玩家评价 > 0 Then 
-		RandomClick 540,933,579,969 //点击关闭		
-		
+		比例触摸_随机点 540,933,579,969 //点击关闭		
+		TracePrint "卡顿检测找到" & ret
 	End If
 	
 	ret = zm.OcrBaiDu(437,314,506,945)	//找网络卡顿弹窗
 	dim 重新发送 = UTF8.InStr(1, ret, "重新发送")
 	If IsNumeric(重新发送) = True And 重新发送 > 0 Then 
-		RandomClick 262,463,309,593 //点击是		
-		
+		比例触摸_随机点 262,463,309,593 //点击是		
+		TracePrint "卡顿检测找到" & ret
 	End If
 	
 	ret = zm.OcrBaiDu(437,314,506,945)	//找网络卡顿弹窗2
 	dim 连接延迟 = UTF8.InStr(1, ret, "连接延迟")
 	If IsNumeric(连接延迟) = True And 连接延迟 > 0 Then 
-		RandomClick 260,578,313,706 //点击确定	
-		
+		比例触摸_随机点 260,578,313,706 //点击确定	
+		TracePrint "卡顿检测找到" & ret
 	End If
     
     ret = zm.OcrBaiDu(405,465,470,829)	//找突袭连接中断
 	dim 中断 = UTF8.InStr(1, ret, "中断")
 	If IsNumeric(中断) = True And 中断 > 0 Then 
-		RandomClick 261,586,305,695 //点击确定	
+		比例触摸_随机点 261,586,305,695 //点击确定
+		TracePrint "卡顿检测找到" & ret
 		画面卡住检测		//重新检测突袭入口
 	End If
 	
 	ret = zm.OcrBaiDu(572,550,618,733)	//找异界地下战利品宝箱
 	dim 宝箱 = UTF8.InStr(1, ret, "宝箱")
 	If IsNumeric(宝箱) = True And 宝箱 > 0 Then 
-		RandomClick 104,585,150,698 //点击确定		
+		比例触摸_随机点 104,585,150,698 //点击确定	
+		TracePrint "卡顿检测找到" & ret
 	End If
 	
+	卡顿检测次数 = 卡顿检测次数 + 1
     
 End Function
 
