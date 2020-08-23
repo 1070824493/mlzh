@@ -43,13 +43,22 @@ app.get('/checkCode', function(req, res) {
 		res.end(JSON.stringify(response));
 		return
 	}
+	if (key.toString().search("drop") != -1 || key.toString().search("DROP") != -1){
+		response = {
+			code: code,
+			detail: "IP已记录,我不想干这等龌蹉的事,也懒得分析你的数据包,大家都是聪明人,望自重~"
+		};
+		res.end(JSON.stringify(response));
+		return
+	}
+
 	pool.getConnection(function(err, connection) {
 		if (err) {
 			console.log(err);
 			code = 999;
 			detail = "database connection error";
 		} else {
-			var sql = "SELECT * from User where UserID = '" + key.toString() + "'"
+			var sql = "SELECT * from User where UserID = '" + connection.escape(key.toString()) + "'"
 			console.log(sql);
 			connection.query(sql, function(err, result) {
 
@@ -300,69 +309,6 @@ app.get('/checkCode', function(req, res) {
 
 })
 
-//给所有注册码新增时间
-/*
-参数: hour
-*/
-app.get('/addTimeAll',function(req, res)) {
-	res.setHeader('Content-Type', 'text/html; charset=utf8');
-	var code = 999; //状态码
-	var detail = "服务器内部错误";
-	var response;
-	console.log("增加时间传参:" + req.query.hour);
-	var key = req.query.hour;
-	if (key === "" || key === undefined) {
-	
-		response = {
-			code: code,
-			detail: "参数错误"
-		};
-		res.end(JSON.stringify(response));
-		return
-	}
-	pool.getConnection(function(err, connection) {
-		if (err) {
-			console.log(err);
-			code = 999;
-			detail = "database connection error";
-		} else {
-			connection.query('SELECT * FROM `User` WHERE `EndTime` != 0', function(err, result) {
-	
-				if (err) {
-					console.log(err);
-					code = 999;
-					detail = "database query error";
-				} else {
-					detail = "添加失败的记录:"
-					var sql = 'UPDATE User SET EndTime = ? WHERE UserID = ?';
-					result.forEach((item, index)=>{
-						let newEndTime = item.EndTime + key * 3600 * 1000
-						var modSqlParams = [newEndTime, item.UserID];
-					    connection.query(sql, modSqlParams, function(err, result) {
-					        if (err) { 
-					            console.log('UPDATE ERROR - ', err.message);
-					            detail = detail + item.UserID + ","
-					        }
-					    })
-					})
-					code = 0;
-					
-				}
-	
-				response = {
-					code: code,
-					detail: detail
-				};
-				connection.release();
-				res.end(JSON.stringify(response));
-			})
-		}
-	
-	})
-	
-	
-}
-
 //查询当前服务器版本号
 app.get('/getVersion', function(req, res) {
 
@@ -410,13 +356,6 @@ app.get('/getVersion', function(req, res) {
 })
 
 
-//下载最新版本的安装包(废弃)
-app.get('/downloadApk', function(req, res) {
-
-	var path = '/www/wwwroot/mlzh/updateApk/泰迪魔灵脚本.apk'; // 文件存储的路径
-	res.download(path,'泰迪新版本.apk');
-})
-
 //检查服务器是否正常开启
 app.get('/', function(req, res) {
 	res.write('service start success')
@@ -449,6 +388,7 @@ app.get('/createCode', function(req, res) {
 		res.end(JSON.stringify(response));
 		return
 	}
+	
 	pool.getConnection(function(err, connection) {
 		if (err) {
 			console.log(err);
@@ -592,6 +532,7 @@ code值:
 3 : 注册码未绑定该设备,请在已绑定的设备进行解绑~
 999 : 参数等异常错误
 */
+/*
 app.get('/unbindDevice', function(req, res) {
 
 	res.setHeader('Content-Type', 'text/html; charset=utf8');
@@ -835,7 +776,7 @@ app.get('/unbindDevice', function(req, res) {
 	})
 
 })
-
+*/
 //时间戳转字符串
 function timetrans(date) {
 	var chinaTime = date; //北京时间需要加12小时
