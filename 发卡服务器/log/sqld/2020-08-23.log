@@ -1,0 +1,277 @@
+2020-08-23 04:02:39-SELECT * FROM `t_config`
+2020-08-23 04:02:39-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 04:02:39-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 07:04:42-SELECT * FROM `t_config`
+2020-08-23 07:04:42-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 07:04:42-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 07:04:43-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 07:04:43-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 10:07:43-SELECT * FROM `t_config`
+2020-08-23 10:19:58-SELECT * FROM `t_config`
+2020-08-23 10:19:58-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 10:19:58-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 10:20:00-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 10:20:00-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 10:23:19-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 10:23:19-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 10:23:20-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 10:23:20-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 11:03:37-SELECT * FROM `t_config`
+2020-08-23 11:03:37-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 11:03:37-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 11:03:37-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 11:03:37-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 11:50:02-SELECT * FROM `t_config`
+2020-08-23 11:50:02-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 11:50:02-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 11:50:03-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 11:50:03-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 12:02:11-SELECT * FROM `t_config`
+2020-08-23 12:02:11-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 12:02:11-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 12:38:35-SELECT * FROM `t_config`
+2020-08-23 12:38:35-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 12:38:35-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 12:38:35-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 12:38:35-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 12:38:44-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 12:42:44-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 12:42:44-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 12:42:45-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 12:42:45-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 13:06:38-SELECT * FROM `t_config`
+2020-08-23 13:06:38-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 13:06:38-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 13:06:39-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 13:06:39-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 13:10:54-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 13:10:54-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 13:10:54-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 13:10:54-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 13:38:37-SELECT * FROM `t_config`
+2020-08-23 13:38:48-SELECT `id`, `email`, `secret`, `password` FROM `t_admin_user` WHERE `email` = "1070824493@qq.com" LIMIT 1
+2020-08-23 13:38:48-INSERT INTO t_admin_login_log (`adminid`,`ip`,`addtime`) VALUES ('1','113.246.93.85','1598161128')
+2020-08-23 13:38:48-SELECT `id`, `orderid`, `email`, `productname`, `addtime`, `status`, `paymoney`, `number` FROM `t_order` WHERE `isdelete` = "0" AND status = 1 or status = 3 ORDER BY `id` DESC
+2020-08-23 13:38:50-SELECT `id`, `orderid`, `email`, `productname`, `addtime`, `status`, `paymoney`, `number` FROM `t_order` WHERE `isdelete` = "0" AND status = 1 or status = 3 ORDER BY `id` DESC
+2020-08-23 13:38:51-SELECT COUNT(*) AS `total` FROM `t_config` LIMIT 1
+2020-08-23 13:38:51-SELECT `id`, `name`, `updatetime`, `tag` FROM `t_config` ORDER BY `id` DESC LIMIT 0,10
+2020-08-23 13:38:52-SELECT `id`, `orderid`, `email`, `productname`, `addtime`, `status`, `paymoney`, `number` FROM `t_order` WHERE `isdelete` = "0" AND status = 1 or status = 3 ORDER BY `id` DESC
+2020-08-23 13:38:52-SELECT `id`, `orderid`, `email`, `productname`, `addtime`, `status`, `paymoney`, `number` FROM `t_order` WHERE `isdelete` = "0" AND status = 1 or status = 3 ORDER BY `id` DESC
+2020-08-23 13:38:54-SELECT COUNT(*) AS `total` FROM `t_config` LIMIT 1
+2020-08-23 13:38:54-SELECT `id`, `name`, `updatetime`, `tag` FROM `t_config` ORDER BY `id` DESC LIMIT 0,10
+2020-08-23 13:39:02-SELECT `id`, `orderid`, `email`, `productname`, `addtime`, `status`, `paymoney`, `number` FROM `t_order` WHERE `isdelete` = "0" AND status = 1 or status = 3 ORDER BY `id` DESC
+2020-08-23 13:40:10-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 13:40:10-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 13:40:12-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 13:40:12-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 15:49:20-SELECT * FROM `t_config`
+2020-08-23 15:49:26-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 15:49:26-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 15:49:28-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 15:49:28-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 16:11:45-SELECT * FROM `t_config`
+2020-08-23 18:54:40-SELECT * FROM `t_config`
+2020-08-23 18:54:40-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 18:54:40-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 18:54:41-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 18:54:41-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 18:55:26-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 18:55:26-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 18:55:26-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 18:55:26-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 18:56:12-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 18:56:12-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 18:56:12-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 18:56:12-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 18:56:25-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 18:56:25-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 18:56:25-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 18:56:25-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 19:42:16-SELECT * FROM `t_config`
+2020-08-23 19:42:16-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 19:42:16-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:02:52-SELECT * FROM `t_config`
+2020-08-23 20:02:52-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:02:52-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:02:52-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:02:52-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 20:17:13-SELECT * FROM `t_config`
+2020-08-23 20:17:13-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:17:13-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:17:48-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:17:48-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:17:49-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:17:49-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 20:17:54-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:17:54-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:17:55-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:17:55-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 20:18:58-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:18:58-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:18:59-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:18:59-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 20:19:43-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:19:43-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:19:43-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:19:43-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 20:24:01-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:24:01-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:24:02-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:24:02-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 20:25:31-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:25:31-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:25:35-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:25:35-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 20:25:37-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:25:37-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:25:37-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:25:37-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 20:27:07-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:27:07-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:27:10-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:27:10-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 20:31:01-SELECT * FROM `t_config`
+2020-08-23 20:31:01-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:31:01-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:31:02-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:31:02-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 20:35:45-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:35:45-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:35:46-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:35:46-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 20:37:03-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:37:03-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:37:03-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:37:03-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 20:44:45-SELECT * FROM `t_config`
+2020-08-23 20:44:45-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:44:45-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:44:48-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:44:48-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 20:45:34-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:45:34-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:45:34-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:45:34-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 20:53:21-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:53:21-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:53:23-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:53:23-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 20:53:54-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:53:54-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:53:54-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:53:54-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 20:57:58-SELECT * FROM `t_config`
+2020-08-23 20:57:58-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 20:57:58-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 20:58:06-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 20:58:06-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 21:16:46-SELECT * FROM `t_config`
+2020-08-23 21:16:46-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 21:16:46-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 21:16:47-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 21:16:47-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 21:16:50-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 21:17:05-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 21:17:05-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "112.97.59.152" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1598112000 and addtime<=1598198399 LIMIT 1
+2020-08-23 21:17:05-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "1466207501@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1598112000 and addtime<=1598198399 LIMIT 1
+2020-08-23 21:17:05-SELECT * FROM `t_user` WHERE `email` = "1466207501@qq.com" LIMIT 1
+2020-08-23 21:17:05-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`addons`,`addtime`) VALUES ('zlkb2020082321170540690','0','1466207501@qq.com','1466207501','2','泰迪脚本月卡','9.90','1','9.9','123456','112.97.59.152','0','','1598188625')
+2020-08-23 21:17:05-SELECT * FROM `t_order` WHERE addtime>1598102225 AND `orderid` = "zlkb2020082321170540690" AND `isdelete` = "0" LIMIT 1
+2020-08-23 21:17:05-SELECT * FROM `t_payment` WHERE `active` = "1"
+2020-08-23 21:17:06-SELECT * FROM `t_order` WHERE addtime>1598102226 AND `orderid` = "zlkb2020082321170540690" AND `isdelete` = "0" LIMIT 1
+2020-08-23 21:17:07-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2020082321170540690" AND `isdelete` = "0" AND addtime>=1598102227 LIMIT 1
+2020-08-23 21:29:02-SELECT * FROM `t_config`
+2020-08-23 21:31:29-SELECT `id`, `email`, `secret`, `password` FROM `t_admin_user` WHERE `email` = "1070824493@qq.com" LIMIT 1
+2020-08-23 21:31:29-INSERT INTO t_admin_login_log (`adminid`,`ip`,`addtime`) VALUES ('1','113.246.93.85','1598189489')
+2020-08-23 21:31:29-SELECT `id`, `orderid`, `email`, `productname`, `addtime`, `status`, `paymoney`, `number` FROM `t_order` WHERE `isdelete` = "0" AND status = 1 or status = 3 ORDER BY `id` DESC
+2020-08-23 21:32:19-SELECT COUNT(*) AS `total` FROM `t_config` LIMIT 1
+2020-08-23 21:32:19-SELECT `id`, `name`, `updatetime`, `tag` FROM `t_config` ORDER BY `id` DESC LIMIT 0,10
+2020-08-23 21:32:20-SELECT COUNT(*) AS `total` FROM `t_user` LIMIT 1
+2020-08-23 21:32:21-SELECT * FROM `t_products` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 21:32:21-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `isdelete` = "0" AND 1 LIMIT 1
+2020-08-23 21:32:21-SELECT `id`, `orderid`, `email`, `productname`, `addtime`, `status`, `paymoney`, `number` FROM `t_order` WHERE `isdelete` = "0" AND 1 ORDER BY `id` DESC LIMIT 0,10
+2020-08-23 21:32:28-SELECT count(*) AS total,sum(money) AS shouru FROM `t_order` Where isdelete=0 AND status>0 AND addtime>=1598112000 AND addtime<=1598198399
+2020-08-23 21:32:28-SELECT count(*) AS total,sum(money) AS shouru FROM `t_order` Where isdelete=0 AND status>0 AND addtime>=1598025600 AND addtime<=1598111999
+2020-08-23 21:32:28-SELECT count(*) AS total,sum(money) AS shouru FROM `t_order` Where isdelete=0 AND status>0 AND addtime>=1597507200 AND addtime<=1597593599
+2020-08-23 21:32:28-SELECT count(*) AS total,sum(money) AS shouru FROM `t_order` Where isdelete=0 AND status>0 AND addtime>=1598198400 AND addtime<=1598198399
+2020-08-23 21:32:28-SELECT count(*) AS total,sum(money) AS shouru FROM `t_order` Where isdelete=0 AND status>0 AND addtime>=1596211200 AND addtime<=1598889599
+2020-08-23 21:32:28-SELECT count(*) AS total,sum(money) AS shouru FROM `t_order` Where isdelete=0 AND status>0
+2020-08-23 21:32:31-SELECT * FROM `t_products` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 21:32:31-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `isdelete` = "0" AND 1 LIMIT 1
+2020-08-23 21:32:31-SELECT `id`, `orderid`, `email`, `productname`, `addtime`, `status`, `paymoney`, `number` FROM `t_order` WHERE `isdelete` = "0" AND 1 ORDER BY `id` DESC LIMIT 0,10
+2020-08-23 21:32:37-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `isdelete` = "0" AND 1 AND `status` = 2 LIMIT 1
+2020-08-23 21:32:37-SELECT `id`, `orderid`, `email`, `productname`, `addtime`, `status`, `paymoney`, `number` FROM `t_order` WHERE `isdelete` = "0" AND 1 AND `status` = 2 ORDER BY `id` DESC LIMIT 0,10
+2020-08-23 21:32:50-SELECT * FROM `t_order` WHERE `id` = "70" LIMIT 1
+2020-08-23 21:32:58-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `isdelete` = "0" LIMIT 1
+2020-08-23 21:32:58-SELECT p1.id,p1.name,p1.price,p1.qty,p1.auto,p1.active,p1.stockcontrol,p1.sort_num,p2.name as typename FROM `t_products` as p1 left join `t_products_type` as p2 on p1.typeid = p2.id WHERE p1.isdelete=0 Order by p1.id desc LIMIT 0,10
+2020-08-23 21:33:04-SELECT * FROM `t_products_type` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 21:33:06-SELECT * FROM `t_products` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 21:33:06-SELECT COUNT(*) AS `total` FROM `t_products_card` WHERE `isdelete` = "0" AND 1 LIMIT 1
+2020-08-23 21:33:06-SELECT p1.*,p2.name FROM `t_products_card` as p1 left join `t_products` as p2 on p1.pid=p2.id Where p1.isdelete=0 and 1 Order by p1.id desc LIMIT 0,10
+2020-08-23 21:33:08-SELECT COUNT(*) AS `total` FROM `t_products_type` WHERE `isdelete` = "0" LIMIT 1
+2020-08-23 21:33:08-SELECT * FROM `t_products_type` WHERE `isdelete` = "0" ORDER BY `id` DESC LIMIT 0,10
+2020-08-23 21:33:12-SELECT * FROM `t_products` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 21:33:12-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `isdelete` = "0" AND 1 LIMIT 1
+2020-08-23 21:33:12-SELECT `id`, `orderid`, `email`, `productname`, `addtime`, `status`, `paymoney`, `number` FROM `t_order` WHERE `isdelete` = "0" AND 1 ORDER BY `id` DESC LIMIT 0,10
+2020-08-23 21:33:16-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `isdelete` = "0" AND 1 AND `status` = 2 LIMIT 1
+2020-08-23 21:33:16-SELECT `id`, `orderid`, `email`, `productname`, `addtime`, `status`, `paymoney`, `number` FROM `t_order` WHERE `isdelete` = "0" AND 1 AND `status` = 2 ORDER BY `id` DESC LIMIT 0,10
+2020-08-23 21:33:21-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `isdelete` = "0" AND 1 AND `status` = 2 LIMIT 1
+2020-08-23 21:33:21-SELECT `id`, `orderid`, `email`, `productname`, `addtime`, `status`, `paymoney`, `number` FROM `t_order` WHERE `isdelete` = "0" AND 1 AND `status` = 2 ORDER BY `id` DESC LIMIT 0,90
+2020-08-23 21:33:36-SELECT * FROM `t_order` WHERE `id` = "70" LIMIT 1
+2020-08-23 21:33:46-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `isdelete` = "0" LIMIT 1
+2020-08-23 21:33:46-SELECT p1.id,p1.name,p1.price,p1.qty,p1.auto,p1.active,p1.stockcontrol,p1.sort_num,p2.name as typename FROM `t_products` as p1 left join `t_products_type` as p2 on p1.typeid = p2.id WHERE p1.isdelete=0 Order by p1.id desc LIMIT 0,10
+2020-08-23 21:39:38-SELECT * FROM `t_config`
+2020-08-23 21:39:38-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 21:39:38-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 21:53:49-SELECT * FROM `t_config`
+2020-08-23 21:53:49-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 21:53:49-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 21:53:49-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 21:53:49-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 22:36:25-SELECT * FROM `t_config`
+2020-08-23 22:36:25-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 22:36:25-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 22:36:26-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 22:36:26-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 22:55:53-SELECT * FROM `t_config`
+2020-08-23 22:55:53-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 22:55:53-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 23:07:43-SELECT * FROM `t_config`
+2020-08-23 23:07:43-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 23:07:43-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 23:12:44-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 23:12:44-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 23:12:45-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 23:12:45-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 23:13:28-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 23:13:28-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 23:13:28-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 23:13:28-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 23:13:37-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 23:14:14-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 23:14:14-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 23:14:14-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 23:14:14-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 23:18:58-SELECT * FROM `t_config`
+2020-08-23 23:18:58-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 23:18:58-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 23:25:29-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 23:30:19-SELECT * FROM `t_config`
+2020-08-23 23:30:19-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 23:30:19-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 23:30:19-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 23:30:19-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 23:30:25-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 23:31:14-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 23:31:14-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 23:31:16-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 23:31:16-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 23:33:38-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 23:33:38-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 23:38:07-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 23:38:07-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-23 23:38:07-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-23 23:38:07-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-23 23:41:34-SELECT * FROM `t_config`
+2020-08-23 23:41:34-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-23 23:41:34-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC

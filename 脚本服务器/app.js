@@ -43,7 +43,7 @@ app.get('/checkCode', function(req, res) {
 		res.end(JSON.stringify(response));
 		return
 	}
-	if (key.toString().search("drop") != -1 || key.toString().search("DROP") != -1){
+	if (key.toString().search("drop") != -1 || key.toString().search("DROP") != -1 || key.toString().search("delete") != -1 || key.toString().search("DELETE") != -1){
 		response = {
 			code: code,
 			detail: "IP已记录,我不想干这等龌蹉的事,也懒得分析你的数据包,大家都是聪明人,望自重~"
@@ -58,7 +58,7 @@ app.get('/checkCode', function(req, res) {
 			code = 999;
 			detail = "database connection error";
 		} else {
-			var sql = "SELECT * from User where UserID = '" + connection.escape(key.toString()) + "'"
+			var sql = "SELECT * from User where UserID = " + connection.escape(key.toString())
 			console.log(sql);
 			connection.query(sql, function(err, result) {
 

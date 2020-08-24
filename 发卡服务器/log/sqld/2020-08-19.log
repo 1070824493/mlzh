@@ -1,0 +1,207 @@
+2020-08-19 03:56:20-SELECT * FROM `t_config`
+2020-08-19 03:56:20-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 03:56:20-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 06:22:40-SELECT * FROM `t_config`
+2020-08-19 06:22:40-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 06:22:40-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 11:47:23-SELECT * FROM `t_config`
+2020-08-19 11:47:23-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 11:47:23-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 11:47:24-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 11:47:24-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 11:55:00-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 11:55:00-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 11:55:17-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 11:55:17-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 12:01:07-SELECT * FROM `t_config`
+2020-08-19 13:39:38-SELECT * FROM `t_config`
+2020-08-19 13:39:38-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 13:39:38-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 13:54:34-SELECT * FROM `t_config`
+2020-08-19 13:54:34-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 13:54:34-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 13:54:34-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 13:54:34-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 14:14:30-SELECT * FROM `t_config`
+2020-08-19 14:14:30-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 14:14:30-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 14:14:30-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:14:30-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 14:14:33-SELECT * FROM `t_products` WHERE `id` = "8" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:18:04-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 14:18:04-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 14:18:04-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:18:04-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 14:18:08-SELECT * FROM `t_products` WHERE `id` = "8" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:18:12-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 14:18:12-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 14:18:12-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:18:12-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 14:18:13-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:18:33-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:18:33-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "183.69.193.96" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1597766400 and addtime<=1597852799 LIMIT 1
+2020-08-19 14:18:33-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "2438970332@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1597766400 and addtime<=1597852799 LIMIT 1
+2020-08-19 14:18:33-SELECT * FROM `t_user` WHERE `email` = "2438970332@qq.com" LIMIT 1
+2020-08-19 14:18:33-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`addons`,`addtime`) VALUES ('zlkb2020081914183368276','0','2438970332@qq.com','2438970332','3','泰迪脚本周卡','4.90','1','4.9','qwe123','183.69.193.96','0','','1597817913')
+2020-08-19 14:18:33-SELECT * FROM `t_order` WHERE addtime>1597731513 AND `orderid` = "zlkb2020081914183368276" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:18:33-SELECT * FROM `t_payment` WHERE `active` = "1"
+2020-08-19 14:18:36-SELECT * FROM `t_order` WHERE addtime>1597731516 AND `orderid` = "zlkb2020081914183368276" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:18:37-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2020081914183368276" AND `isdelete` = "0" AND addtime>=1597731517 LIMIT 1
+2020-08-19 14:18:44-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 14:18:44-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 14:18:44-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:18:44-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 14:18:46-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:18:58-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:18:58-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "183.69.193.96" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1597766400 and addtime<=1597852799 LIMIT 1
+2020-08-19 14:18:58-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "2438970332@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1597766400 and addtime<=1597852799 LIMIT 1
+2020-08-19 14:18:58-SELECT * FROM `t_user` WHERE `email` = "2438970332@qq.com" LIMIT 1
+2020-08-19 14:18:58-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`addons`,`addtime`) VALUES ('zlkb2020081914185840690','0','2438970332@qq.com','2438970332','3','泰迪脚本周卡','4.90','1','4.9','qwe123','183.69.193.96','0','','1597817938')
+2020-08-19 14:18:58-SELECT * FROM `t_order` WHERE addtime>1597731538 AND `orderid` = "zlkb2020081914185840690" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:19:00-SELECT * FROM `t_order` WHERE addtime>1597731540 AND `orderid` = "zlkb2020081914185840690" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:19:00-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2020081914185840690" AND `isdelete` = "0" AND addtime>=1597731540 LIMIT 1
+2020-08-19 14:19:05-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 14:19:05-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 14:19:06-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:19:06-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 14:19:08-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:19:21-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:19:21-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "183.69.193.96" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1597766400 and addtime<=1597852799 LIMIT 1
+2020-08-19 14:19:21-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "2438970332@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1597766400 and addtime<=1597852799 LIMIT 1
+2020-08-19 14:19:21-SELECT * FROM `t_user` WHERE `email` = "2438970332@qq.com" LIMIT 1
+2020-08-19 14:19:21-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`addons`,`addtime`) VALUES ('zlkb2020081914192160564','0','2438970332@qq.com','2438970332','3','泰迪脚本周卡','4.90','1','4.9','qwe123','183.69.193.96','0','','1597817961')
+2020-08-19 14:19:21-SELECT * FROM `t_order` WHERE addtime>1597731561 AND `orderid` = "zlkb2020081914192160564" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:19:24-SELECT * FROM `t_order` WHERE addtime>1597731564 AND `orderid` = "zlkb2020081914192160564" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:19:24-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2020081914192160564" AND `isdelete` = "0" AND addtime>=1597731564 LIMIT 1
+2020-08-19 14:19:35-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2020081914192160564" LIMIT 1
+2020-08-19 14:19:35-UPDATE `t_order` SET `status` = '1',`paytime` = '1597817975',`tradeid` = '2020081922001497691452141187',`paymethod` = 'zfbf2f',`paymoney` = '4.90'  WHERE `orderid` = "zlkb2020081914192160564" AND `status` = "0"
+2020-08-19 14:19:35-SELECT auto,stockcontrol,qty FROM `t_products` WHERE `id` = "3" LIMIT 1
+2020-08-19 14:19:35-SELECT * FROM `t_products_card` WHERE `pid` = "3" AND `active` = "0" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:19:35-UPDATE `t_products_card` SET `active` = '1'  WHERE id in (4) AND `active` = "0"
+2020-08-19 14:19:35-UPDATE `t_products` SET `qty` = `qty` - '1',`qty_virtual` = `qty_virtual` - '1',`qty_sell` = `qty_sell` + '1'  WHERE `id` = "3" AND `stockcontrol` = "1"
+2020-08-19 14:19:35-UPDATE `t_order` SET `status` = '2',`kami` = '01e80d42-b0a6-45e8-bcbe-9a8815b41de6'  WHERE `orderid` = "zlkb2020081914192160564" AND `status` = "1"
+2020-08-19 14:19:35-INSERT INTO t_email_queue(`email`,`subject`,`content`,`addtime`,`status`) VALUES ('2438970332@qq.com','商品购买成功','用户:2438970332@qq.com,购买的商品[泰迪脚本周卡],密码是:01e80d42-b0a6-45e8-bcbe-9a8815b41de6','1597817975','0'),('demo@demo.com','用户购买商品','用户:2438970332@qq.com,购买的商品[泰迪脚本周卡],密码发送成功;当前商品库存剩余:97','1597817975','0')
+2020-08-19 14:19:35-SELECT * FROM `t_email` WHERE `isdelete` = "0"
+2020-08-19 14:19:35-UPDATE `t_email_queue` SET `status` = '2',`sendresult` = '失败lang:email_no_hostnamelang:email_send_failure_smtpUser-Agent:CodeIgniterDate:Wed,19Aug202014:19:35+0800From:&quot;&quot;&lt;&gt;Return-Path:&lt;&gt;To:2438970332@qq.comSubject:=?utf-8?Q?=E5=95=86=E5=93=81=E8=B4=AD=E4=B9=B0=E6=88=90=E5=8A=9F?=Reply-To:&lt;&gt;X-Mailer:CodeIgniterX-Priority:3(Normal)Message-ID:&lt;5f3cc477409ad&gt;Mime-Version:1.0Content-Type:multipart/alternative;boundary=&quot;B_ALT_5f3cc477409b2&quot;Thisisamulti-partmessageinMIMEformat.Youremailapplicationmaynotsupportthisformat.--B_ALT_5f3cc477409b2Content-Type:text/plain;charset=utf-8Content-Transfer-Encoding:8bit用户:2438970332@qq.com,购买的商品[泰迪脚本周卡],密码是:01e80d42-b0a6-45e8-bcbe-9a8815b41de6--B_ALT_5f3cc477409b2Content-Type:text/html;charset=utf-8Content-Transfer-Encoding:quoted-printable=E7=94=A8=E6=88=B7:2438970332@qq.com,=E8=B4=AD=E4=B9=B0=E7=9A=84=E5=95==86=E5=93=81[=E6=B3=B0=E8=BF=AA=E8=84=9A=E6=9C=AC=E5=91=A8=E5=8D=A1],==E5=AF=86=E7=A0=81=E6=98=AF:01e80d42-b0a6-45e8-bcbe-9a8815b41de6--B_ALT_5f3cc477409b2--'  WHERE `email` = "2438970332@qq.com" AND `subject` = "商品购买成功" AND `content` = "用户:2438970332@qq.com,购买的商品[泰迪脚本周卡],密码是:01e80d42-b0a6-45e8-bcbe-9a8815b41de6" AND `addtime` = "1597817975" AND `status` = "0"
+2020-08-19 14:19:35-UPDATE `t_email_queue` SET `status` = '2',`sendresult` = '失败lang:email_no_hostnamelang:email_send_failure_smtpUser-Agent:CodeIgniterDate:Wed,19Aug202014:19:36+0800From:&quot;&quot;&lt;&gt;Return-Path:&lt;&gt;To:demo@demo.comSubject:=?utf-8?Q?=E7=94=A8=E6=88=B7=E8=B4=AD=E4=B9=B0=E5=95=86=E5=93=81?=Reply-To:&lt;&gt;X-Mailer:CodeIgniterX-Priority:3(Normal)Message-ID:&lt;5f3cc4784142f&gt;Mime-Version:1.0Content-Type:multipart/alternative;boundary=&quot;B_ALT_5f3cc47841434&quot;Thisisamulti-partmessageinMIMEformat.Youremailapplicationmaynotsupportthisformat.--B_ALT_5f3cc47841434Content-Type:text/plain;charset=utf-8Content-Transfer-Encoding:8bit用户:2438970332@qq.com,购买的商品[泰迪脚本周卡],密码发送成功;当前商品库存剩余:97--B_ALT_5f3cc47841434Content-Type:text/html;charset=utf-8Content-Transfer-Encoding:quoted-printable=E7=94=A8=E6=88=B7:2438970332@qq.com,=E8=B4=AD=E4=B9=B0=E7=9A=84=E5=95==86=E5=93=81[=E6=B3=B0=E8=BF=AA=E8=84=9A=E6=9C=AC=E5=91=A8=E5=8D=A1],==E5=AF=86=E7=A0=81=E5=8F=91=E9=80=81=E6=88=90=E5=8A=9F;=E5=BD=93=E5=89==8D=E5=95=86=E5=93=81=E5=BA=93=E5=AD=98=E5=89=A9=E4=BD=99:97--B_ALT_5f3cc47841434--'  WHERE `email` = "demo@demo.com" AND `subject` = "用户购买商品" AND `content` = "用户:2438970332@qq.com,购买的商品[泰迪脚本周卡],密码发送成功;当前商品库存剩余:97" AND `addtime` = "1597817975" AND `status` = "0"
+2020-08-19 14:19:43-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 14:19:43-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 14:19:44-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:19:44-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 14:19:46-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:20:05-SELECT * FROM `t_order` WHERE `orderid` = "qwe123" AND `isdelete` = "0" AND `ip` = "183.69.193.96" AND addtime>=1595139605 ORDER BY `id` desc
+2020-08-19 14:20:12-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 14:20:12-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 14:20:13-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:20:13-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 14:20:32-SELECT * FROM `t_order` WHERE `email` = "2438970332@qq.com" AND `chapwd` = "qwe123" AND `isdelete` = "0" AND addtime>=1595139632 ORDER BY `id` desc
+2020-08-19 14:20:45-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2020081914192160564" AND `status` = "2" AND addtime>=1595139645 LIMIT 1
+2020-08-19 14:30:59-SELECT * FROM `t_config`
+2020-08-19 14:52:14-SELECT * FROM `t_config`
+2020-08-19 14:52:14-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 14:52:14-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 14:52:14-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 14:52:14-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 14:52:15-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 14:52:15-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 14:52:26-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 14:52:26-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 15:31:11-SELECT * FROM `t_config`
+2020-08-19 15:31:11-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 15:31:11-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 15:31:12-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 15:31:12-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 15:31:25-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 15:31:25-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 15:31:25-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 15:31:25-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 15:32:03-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 15:32:03-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 15:32:03-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 15:32:03-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 15:32:06-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 15:32:06-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 15:32:06-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 15:32:06-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 15:45:58-SELECT * FROM `t_config`
+2020-08-19 17:00:27-SELECT * FROM `t_config`
+2020-08-19 17:00:27-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 17:00:27-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 17:11:37-SELECT * FROM `t_config`
+2020-08-19 17:11:37-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 17:11:37-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 18:53:59-SELECT * FROM `t_config`
+2020-08-19 18:53:59-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 18:53:59-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 18:53:59-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 18:53:59-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 19:38:22-SELECT * FROM `t_config`
+2020-08-19 19:38:22-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 19:38:22-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 19:38:25-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 19:38:25-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 19:38:56-SELECT * FROM `t_products` WHERE `id` = "4" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 19:39:25-SELECT * FROM `t_products` WHERE `id` = "4" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 19:39:25-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "183.138.179.233" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1597766400 and addtime<=1597852799 LIMIT 1
+2020-08-19 19:39:25-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "245459731@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1597766400 and addtime<=1597852799 LIMIT 1
+2020-08-19 19:39:25-SELECT * FROM `t_user` WHERE `email` = "245459731@qq.com" LIMIT 1
+2020-08-19 19:39:25-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`addons`,`addtime`) VALUES ('zlkb2020081919392518817','0','245459731@qq.com','245459731','4','泰迪脚本季卡','24.90','1','24.9','nanbei918','183.138.179.233','0','','1597837165')
+2020-08-19 19:39:25-SELECT * FROM `t_order` WHERE addtime>1597750765 AND `orderid` = "zlkb2020081919392518817" AND `isdelete` = "0" LIMIT 1
+2020-08-19 19:39:25-SELECT * FROM `t_payment` WHERE `active` = "1"
+2020-08-19 19:39:31-SELECT * FROM `t_order` WHERE addtime>1597750771 AND `orderid` = "zlkb2020081919392518817" AND `isdelete` = "0" LIMIT 1
+2020-08-19 19:39:32-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2020081919392518817" AND `isdelete` = "0" AND addtime>=1597750772 LIMIT 1
+2020-08-19 19:39:35-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2020081919392518817" AND `isdelete` = "0" AND addtime>=1597750775 LIMIT 1
+2020-08-19 19:39:38-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2020081919392518817" AND `isdelete` = "0" AND addtime>=1597750778 LIMIT 1
+2020-08-19 19:39:41-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2020081919392518817" AND `isdelete` = "0" AND addtime>=1597750781 LIMIT 1
+2020-08-19 19:39:44-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2020081919392518817" AND `isdelete` = "0" AND addtime>=1597750784 LIMIT 1
+2020-08-19 19:39:47-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2020081919392518817" AND `isdelete` = "0" AND addtime>=1597750787 LIMIT 1
+2020-08-19 19:39:50-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2020081919392518817" LIMIT 1
+2020-08-19 19:39:50-UPDATE `t_order` SET `status` = '1',`paytime` = '1597837190',`tradeid` = '2020081922001449831441568374',`paymethod` = 'zfbf2f',`paymoney` = '24.90'  WHERE `orderid` = "zlkb2020081919392518817" AND `status` = "0"
+2020-08-19 19:39:50-SELECT auto,stockcontrol,qty FROM `t_products` WHERE `id` = "4" LIMIT 1
+2020-08-19 19:39:50-SELECT * FROM `t_products_card` WHERE `pid` = "4" AND `active` = "0" AND `isdelete` = "0" LIMIT 1
+2020-08-19 19:39:50-UPDATE `t_products_card` SET `active` = '1'  WHERE id in (208) AND `active` = "0"
+2020-08-19 19:39:50-UPDATE `t_products` SET `qty` = `qty` - '1',`qty_virtual` = `qty_virtual` - '1',`qty_sell` = `qty_sell` + '1'  WHERE `id` = "4" AND `stockcontrol` = "1"
+2020-08-19 19:39:50-UPDATE `t_order` SET `status` = '2',`kami` = 'b8ed040a-729a-41bb-91c1-9c9976c8d5e8'  WHERE `orderid` = "zlkb2020081919392518817" AND `status` = "1"
+2020-08-19 19:39:50-INSERT INTO t_email_queue(`email`,`subject`,`content`,`addtime`,`status`) VALUES ('245459731@qq.com','商品购买成功','用户:245459731@qq.com,购买的商品[泰迪脚本季卡],密码是:b8ed040a-729a-41bb-91c1-9c9976c8d5e8','1597837190','0'),('demo@demo.com','用户购买商品','用户:245459731@qq.com,购买的商品[泰迪脚本季卡],密码发送成功;当前商品库存剩余:93','1597837190','0')
+2020-08-19 19:39:50-SELECT * FROM `t_email` WHERE `isdelete` = "0"
+2020-08-19 19:39:50-UPDATE `t_email_queue` SET `status` = '2',`sendresult` = '失败lang:email_no_hostnamelang:email_send_failure_smtpUser-Agent:CodeIgniterDate:Wed,19Aug202019:39:50+0800From:&quot;&quot;&lt;&gt;Return-Path:&lt;&gt;To:245459731@qq.comSubject:=?utf-8?Q?=E5=95=86=E5=93=81=E8=B4=AD=E4=B9=B0=E6=88=90=E5=8A=9F?=Reply-To:&lt;&gt;X-Mailer:CodeIgniterX-Priority:3(Normal)Message-ID:&lt;5f3d0f865a470&gt;Mime-Version:1.0Content-Type:multipart/alternative;boundary=&quot;B_ALT_5f3d0f865a474&quot;Thisisamulti-partmessageinMIMEformat.Youremailapplicationmaynotsupportthisformat.--B_ALT_5f3d0f865a474Content-Type:text/plain;charset=utf-8Content-Transfer-Encoding:8bit用户:245459731@qq.com,购买的商品[泰迪脚本季卡],密码是:b8ed040a-729a-41bb-91c1-9c9976c8d5e8--B_ALT_5f3d0f865a474Content-Type:text/html;charset=utf-8Content-Transfer-Encoding:quoted-printable=E7=94=A8=E6=88=B7:245459731@qq.com,=E8=B4=AD=E4=B9=B0=E7=9A=84=E5=95=86==E5=93=81[=E6=B3=B0=E8=BF=AA=E8=84=9A=E6=9C=AC=E5=AD=A3=E5=8D=A1],=E5=AF==86=E7=A0=81=E6=98=AF:b8ed040a-729a-41bb-91c1-9c9976c8d5e8--B_ALT_5f3d0f865a474--'  WHERE `email` = "245459731@qq.com" AND `subject` = "商品购买成功" AND `content` = "用户:245459731@qq.com,购买的商品[泰迪脚本季卡],密码是:b8ed040a-729a-41bb-91c1-9c9976c8d5e8" AND `addtime` = "1597837190" AND `status` = "0"
+2020-08-19 19:39:50-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2020081919392518817" AND `isdelete` = "0" AND addtime>=1597750790 LIMIT 1
+2020-08-19 19:39:50-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2020081919392518817" AND `email` = "245459731@qq.com" AND `isdelete` = "0" LIMIT 1
+2020-08-19 19:39:50-UPDATE `t_email_queue` SET `status` = '2',`sendresult` = '失败lang:email_no_hostnamelang:email_send_failure_smtpUser-Agent:CodeIgniterDate:Wed,19Aug202019:39:51+0800From:&quot;&quot;&lt;&gt;Return-Path:&lt;&gt;To:demo@demo.comSubject:=?utf-8?Q?=E7=94=A8=E6=88=B7=E8=B4=AD=E4=B9=B0=E5=95=86=E5=93=81?=Reply-To:&lt;&gt;X-Mailer:CodeIgniterX-Priority:3(Normal)Message-ID:&lt;5f3d0f875b3b4&gt;Mime-Version:1.0Content-Type:multipart/alternative;boundary=&quot;B_ALT_5f3d0f875b3ba&quot;Thisisamulti-partmessageinMIMEformat.Youremailapplicationmaynotsupportthisformat.--B_ALT_5f3d0f875b3baContent-Type:text/plain;charset=utf-8Content-Transfer-Encoding:8bit用户:245459731@qq.com,购买的商品[泰迪脚本季卡],密码发送成功;当前商品库存剩余:93--B_ALT_5f3d0f875b3baContent-Type:text/html;charset=utf-8Content-Transfer-Encoding:quoted-printable=E7=94=A8=E6=88=B7:245459731@qq.com,=E8=B4=AD=E4=B9=B0=E7=9A=84=E5=95=86==E5=93=81[=E6=B3=B0=E8=BF=AA=E8=84=9A=E6=9C=AC=E5=AD=A3=E5=8D=A1],=E5=AF==86=E7=A0=81=E5=8F=91=E9=80=81=E6=88=90=E5=8A=9F;=E5=BD=93=E5=89=8D==E5=95=86=E5=93=81=E5=BA=93=E5=AD=98=E5=89=A9=E4=BD=99:93--B_ALT_5f3d0f875b3ba--'  WHERE `email` = "demo@demo.com" AND `subject` = "用户购买商品" AND `content` = "用户:245459731@qq.com,购买的商品[泰迪脚本季卡],密码发送成功;当前商品库存剩余:93" AND `addtime` = "1597837190" AND `status` = "0"
+2020-08-19 19:39:54-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2020081919392518817" AND `status` = "2" AND addtime>=1595158794 LIMIT 1
+2020-08-19 19:54:07-SELECT * FROM `t_config`
+2020-08-19 19:54:07-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 19:54:07-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 19:54:09-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 19:54:09-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 21:14:44-SELECT * FROM `t_config`
+2020-08-19 21:14:44-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 21:14:44-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 21:40:48-SELECT * FROM `t_config`
+2020-08-19 21:40:48-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 21:40:48-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 22:22:55-SELECT * FROM `t_config`
+2020-08-19 22:22:55-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 22:22:55-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 22:28:26-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 22:28:26-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 22:28:27-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `active` = "1" AND `isdelete` = "0" LIMIT 1
+2020-08-19 22:28:27-SELECT p1.* FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC LIMIT 0,10
+2020-08-19 22:41:40-SELECT * FROM `t_config`
+2020-08-19 22:41:40-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2020-08-19 22:41:40-SELECT p1.*,p2.id AS products_type_id,p2.name AS products_type_name FROM `t_products` as p1 left join t_products_type as p2 on p1.typeid =p2.id where p1.active=1 and p1.isdelete=0 and p2.active=1 and p2.isdelete=0 order by p2.sort_num DESC, p1.sort_num DESC
+2020-08-19 22:54:03-SELECT * FROM `t_config`
+2020-08-19 22:54:05-SELECT `id`, `email`, `secret`, `password` FROM `t_admin_user` WHERE `email` = "1070824493@qq.com" LIMIT 1
+2020-08-19 22:54:05-INSERT INTO t_admin_login_log (`adminid`,`ip`,`addtime`) VALUES ('1','113.247.23.116','1597848845')
+2020-08-19 22:54:05-SELECT `id`, `orderid`, `email`, `productname`, `addtime`, `status`, `paymoney`, `number` FROM `t_order` WHERE `isdelete` = "0" AND status = 1 or status = 3 ORDER BY `id` DESC
+2020-08-19 22:54:07-SELECT COUNT(*) AS `total` FROM `t_config` LIMIT 1
+2020-08-19 22:54:07-SELECT `id`, `name`, `updatetime`, `tag` FROM `t_config` ORDER BY `id` DESC LIMIT 0,10
+2020-08-19 22:54:09-SELECT COUNT(*) AS `total` FROM `t_config` LIMIT 1
+2020-08-19 22:54:09-SELECT `id`, `name`, `updatetime`, `tag` FROM `t_config` ORDER BY `id` DESC LIMIT 20,10
+2020-08-19 22:54:10-SELECT * FROM `t_config` WHERE `id` = "8" LIMIT 1
+2020-08-19 22:54:28-UPDATE `t_config` SET `name` = 'notice',`value` = '注：此界面建议使用电脑端打开~ 另外感谢大家使用泰迪脚本~ 使用说明具体见QQ群文件~&lt;br/&gt;
+支持突袭，异界，竞技场，所有地下城，次元，爬塔等模式 &lt;br/&gt;
+支持红手指及mumu模拟器（Mac电脑也支持）:&lt;a href=&quot;http://a11.gdl.netease.com/nemu-2.1.5-x86-0221181544.exe&quot; target=&quot;_blank&quot;&gt;模拟器下载&lt;/a&gt; &lt;a href=&quot;https://teddy.lanzoui.com/irzljftygdc&quot; target=&quot;_blank&quot;&gt;泰迪脚本下载&lt;/a&gt; &lt;a href=&quot;https://www.withhive.com/games/313&quot; target=&quot;_blank&quot;&gt;魔灵官网下载&lt;/a&gt; &lt;br/&gt; 
+有任何请联系泰迪（群号：①群：838134503 &lt;a target=&quot;_blank&quot; href=&quot;https://qm.qq.com/cgi-bin/qm/qr?k=aV3n0Ge7PTx4uk6Nh9XOp43xSz3Lhoxc&amp;jump_from=webapi&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;//pub.idqqimg.com/wpa/images/group.png&quot; alt=&quot;泰迪魔灵召唤脚本&quot; title=&quot;泰迪魔灵召唤脚本&quot;&gt;&lt;/a&gt;，②群：654740867 &lt;a target=&quot;_blank&quot; href=&quot;https://qm.qq.com/cgi-bin/qm/qr?k=5wPzW-dTS1_rm73iKNFtv7v6sgjoxNPl&amp;jump_from=webapi&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;//pub.idqqimg.com/wpa/images/group.png&quot; alt=&quot;泰迪魔灵召唤脚本②&quot; title=&quot;泰迪魔灵召唤脚本②&quot;&gt;&lt;/a&gt;）',`tag` = '首页公告'  WHERE `id` = "8" LIMIT 1
+2020-08-19 22:54:28-SELECT * FROM `t_config`
+2020-08-19 22:54:29-SELECT * FROM `t_config` WHERE `id` = "8" LIMIT 1
