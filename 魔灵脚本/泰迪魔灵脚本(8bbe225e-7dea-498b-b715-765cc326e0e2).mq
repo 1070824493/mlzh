@@ -5,7 +5,7 @@ Import "zm.luae" //导入插件,只需执行一次
 zm.Init()  //初始化插件,只需执行一次
 zm.InitBase64 
 
-Dim currentVersion = 27	//当前版本号
+Dim currentVersion = 29	//当前版本号
 
 Dim regToken = ""	//答题识别token
 //初始化答题识别器	
@@ -103,7 +103,9 @@ Dim 地下城战斗准备() = 比例换算(Array(297,288,367,539,"ADE9F8-101010","7|0|ADE9F
 
 Dim 体力不足() = 比例换算(Array(246,695,304,770,"ADE9F8","1|-14|439ECD,7|-7|022741,9|4|ADE9F8,10|10|ADE9F8,-10|10|ADE9F8,-13|10|032842,5|13|022741,-11|1|A4DFEF,-8|14|022741","体力不足"))
 Dim 邮箱体力不足() = 比例换算(Array(246,695,304,770,"56747C","1|-14|214F66,7|-7|011320,9|4|56747C,10|10|56747C,-10|10|56747C,-13|10|011421,5|13|011320,-11|1|526F77,-8|14|011320","邮箱体力不足"))
-Dim 胜利() = 比例换算(Array(549,550,661,664,"33FEFF","8|-24|35FFFF,-13|-24|86F4FF,-40|-27|03B9FF,-43|-2|03B5FF,-43|14|04B5FF,8|1|2EFFFF,-20|14|B1F3FF,8|20|0F2C5C,-38|1|0C1D4C","胜利"))
+//Dim 胜利() = 比例换算(Array(549,550,661,664,"33FEFF","8|-24|35FFFF,-13|-24|86F4FF,-40|-27|03B9FF,-43|-2|03B5FF,-43|14|04B5FF,8|1|2EFFFF,-20|14|B1F3FF,8|20|0F2C5C,-38|1|0C1D4C","胜利"))
+Dim 胜利() = 比例换算(Array(553,550,653,728,"33FEFD-101010","-17|0|2FF5FD-151515,-44|-1|19C4FD-151515,-52|54|0BB7F5-151515,-30|51|93EFFE-151515,-10|51|2DFCFE-151515,1|39|3AFDFB-151515,-4|106|3CFFFB-151515,0|124|386988-151515,-45|121|29CBF8-151515","胜利"))
+
 Dim 翻车() = 比例换算(Array(216,355,288,552,"855BFC-101010","7|0|5827E7-101010,16|-2|F1E0FF-101010,14|7|8041FC-101010,31|3|112C41-101010,31|77|112B41-101010,19|77|ADE9F8-101010,9|93|ADE9F8-101010,20|128|ADE9F8-101010,2|131|ADE9F8-101010","翻车"))
 //Dim 失败() = 比例换算(Array(560,554,648,649,"34FCFB","7|-17|33FFFF,11|0|30FFFF,1|18|39FFFE,-16|-1|33DDCF,-15|-26|33E3D5,-15|22|33E0D3,-38|-24|33AC89,-35|17|2FB08F,-20|-11|083A3D","失败"))
 Dim 秘密地下() = 比例换算(Array(563,743,652,833,"21EAFF","21|-21|31FFFF,22|19|55FFFF,0|20|7FF9FF,4|-20|3EF2FF,-26|-24|06B9FF,-27|-1|0ABAFF,-28|27|02B5FF,-14|12|102859","秘密地下"))
@@ -119,7 +121,9 @@ Dim 进行战斗() = 比例换算(Array(92,848,171,955,"A9E5F4","-22|-1|A9E5F4,-22|21|A9
 
 //竞技场模式
 //Dim 翅膀() = 比例换算(Array(82,988,589,1033,"FEF7F4","-3|3|102440,10|12|F5F1F0,6|14|21354E,3|15|FFFFFF,-4|13|BED1D0,-7|1|FFF7F6,0|-3|102441,8|1|50ACD4","翅膀"))
-Dim 竞技场战斗() = 比例换算(Array(85,980,587,1074,"358CC1-151515","0|8|ADE9F8-151515,0|11|022741-151515,0|15|0F364F-151515,0|18|A2DCEC-151515,0|20|022741-151515,-3|27|ADE9F8-151515,7|42|A9E4F4-151515,9|45|022741-151515,13|45|ADE9F8-151515","竞技场战斗"))
+//Dim 竞技场战斗() = 比例换算(Array(85,980,587,1074,"358CC1-151515","0|8|ADE9F8-151515,0|11|022741-151515,0|15|0F364F-151515,0|18|A2DCEC-151515,0|20|022741-151515,-3|27|ADE9F8-151515,7|42|A9E4F4-151515,9|45|022741-151515,13|45|ADE9F8-151515","竞技场战斗"))
+Dim 竞技场战斗() = 比例换算(Array(85,980,587,1074,"ADE9F8-101010","-13|0|ADE9F8-101010,-16|0|022741-101010,-24|0|ADE9F8-101010,-10|31|ADE9F8-101010,-7|34|022741-101010,-4|36|ADE9F8-101010,-3|43|ADE9F8-101010,-26|43|ADE9F8-101010,-28|44|022741-101010","竞技场战斗"))
+
 Dim 翅膀反击() = 比例换算(Array(88,966,586,1085,"1E4C7A-101010","-1|25|092F48-101010,-11|31|022741-101010,-15|39|ADE9F8-101010,-6|40|072C46-101010,-3|46|ADE9F8-101010,-6|56|ADE9F8-101010,-6|80|ADE9F8-101010,29|70|FDFDFD-101010,25|32|FFF3F0-101010","翅膀反击"))
 Dim 竞技场刷新等待() = 比例换算(Array(519,882,621,986,"E5F1F6-101010","17|0|E3F2F8-101010,3|12|E1F1F8-101010,10|7|E0F2F7-101010,16|13|E2F0F8-101010,38|3|326F8E-101010,-16|2|1E5472-101010","竞技场刷新等待"))
 
@@ -663,11 +667,11 @@ End Function
 
 Function 触摸_点(x, y)
     Dim delayTime  
-    delayTime = int(Rnd() * 500 + 1000)//取1000-1500毫秒随机数
+    delayTime = int(Rnd() * 500 + 500)//取1000-1500毫秒随机数
     Delay delayTime
     TracePrint "点击...",x,y
     Tap x, y
-    delayTime = int(Rnd() * 500 + 1000)//取1000-1500毫秒随机数
+    delayTime = int(Rnd() * 500 + 500)//取1000-1500毫秒随机数
     Delay delayTime
 End Function
 
@@ -1249,7 +1253,7 @@ Function 突袭模式
         End If
        
         If 比例找色(胜利) = 1 Then 
-            Delay 4000
+            Delay 3500
             比例触摸_随机点 216, 332, 488, 1165
             success = success + 1
             //点出宝箱
@@ -2615,10 +2619,15 @@ Function judgeQuestion()
     //判断是否弹出答题界面 
     If isQuestionExist() = True Then
         TracePrint "出现了答题"
+        
+        Rem 重新识别题目
+        
         dim ret = zm.OcrBaiDu(483,422,546,852)
         If IsNull(ret) or ret = "" Then 
             ShowMessage "答题服务器异常"
             TracePrint "答题服务器异常"
+            Delay 3000
+            goto 重新识别题目
         Else 
             TracePrint "识别结果:" & ret
             ShowMessage "识别结果:" & ret
@@ -2631,7 +2640,7 @@ Function judgeQuestion()
         Dim fileName = "/" & Replace(GetNetworkTime()," ","-")  &".png" 
         SnapShot dirPath & fileName
         TracePrint dirPath & fileName
-        If falseTime = 2 Then 
+        If falseTime = 3 Then 
 
             endReason = "连续答题错误三次,停止脚本"
             //            uploadSnapToServer(fileNameArr)
@@ -2779,8 +2788,8 @@ Function judgeAnswer(reg, hasFei, count)
             End If
         End If
         
-        If didFindCount = count Then 
-            Exit For
+        If  CStr(didFindCount) = CStr(count) Then 
+            Exit Function
         End If             
     Next
     
@@ -2863,7 +2872,7 @@ Function MoveToPointAndTap(x, y,check)
     
     Dim delayTime
        
-    delayTime = int(Rnd() * 1000 + 500)//取1000-1500毫秒随机数
+    delayTime = int(Rnd() * 500 + 500)//取1000-1500毫秒随机数
     Delay delayTime
     fColor = GetPixelColor(x,y,0)
 
@@ -2871,7 +2880,7 @@ Function MoveToPointAndTap(x, y,check)
     Tap x, y
     TracePrint "点击坐标:"&x&y
 
-    delayTime = int(Rnd() * 1000 + 500)//取1000-1500毫秒随机数    
+    delayTime = int(Rnd() * 500 + 500)//取1000-1500毫秒随机数    
     Delay delayTime
 
     sColor = GetPixelColor(x,y,0)
@@ -3279,7 +3288,7 @@ Function checkRegisterCode(code)
             File.append("/system/lib/libz",uuid)
         End If
         deviceID = File.Read("/system/lib/libz")
-        If IsNull(deviceID) = True or deviceID = "" Then 
+        If IsNull(deviceID) = True or deviceID = "" or deviceID = "0" Then 
             deviceID = code
         End If
     
