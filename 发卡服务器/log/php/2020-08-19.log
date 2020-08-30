@@ -1,0 +1,2 @@
+[19-Aug-2020 14:19:35 Asia/Chongqing] PHP Warning:  array_rand(): Array is empty in /www/wwwroot/antme.ml/application/model/M_Email.php on line 40
+[19-Aug-2020 19:39:50 Asia/Chongqing] PHP Warning:  array_rand(): Array is empty in /www/wwwroot/antme.ml/application/model/M_Email.php on line 40
