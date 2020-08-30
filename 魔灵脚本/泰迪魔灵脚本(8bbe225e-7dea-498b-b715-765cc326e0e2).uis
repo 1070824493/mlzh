@@ -1,29 +1,29 @@
 
-
-Function star1
-    UIP.SetAttribute "1星狗粮", {"选中":True}
-    UIP.SetAttribute "2星狗粮", {"选中":false}
-    UIP.SetAttribute "3星狗粮", {"选中":false}
-    UIP.SetAttribute "4星狗粮", {"选中":false}
-End Function
-Function star2
-    UIP.SetAttribute "1星狗粮", {"选中":false}
-    UIP.SetAttribute "2星狗粮", {"选中":true}
-    UIP.SetAttribute "3星狗粮", {"选中":false}
-    UIP.SetAttribute "4星狗粮", {"选中":false}
-End Function
-Function star3
-    UIP.SetAttribute "1星狗粮", {"选中":false}
-    UIP.SetAttribute "2星狗粮", {"选中":false}
-    UIP.SetAttribute "3星狗粮", {"选中":true}
-    UIP.SetAttribute "4星狗粮", {"选中":false}
-End Function
-Function star4
-    UIP.SetAttribute "1星狗粮", {"选中":false}
-    UIP.SetAttribute "2星狗粮", {"选中":false}
-    UIP.SetAttribute "3星狗粮", {"选中":false}
-    UIP.SetAttribute "4星狗粮", {"选中":true}
-End Function
+//狗粮选择互斥代码
+//Function star1
+//    UIP.SetAttribute "1星狗粮", {"选中":True}
+//    UIP.SetAttribute "2星狗粮", {"选中":false}
+//    UIP.SetAttribute "3星狗粮", {"选中":false}
+//    UIP.SetAttribute "4星狗粮", {"选中":false}
+//End Function
+//Function star2
+//    UIP.SetAttribute "1星狗粮", {"选中":false}
+//    UIP.SetAttribute "2星狗粮", {"选中":true}
+//    UIP.SetAttribute "3星狗粮", {"选中":false}
+//    UIP.SetAttribute "4星狗粮", {"选中":false}
+//End Function
+//Function star3
+//    UIP.SetAttribute "1星狗粮", {"选中":false}
+//    UIP.SetAttribute "2星狗粮", {"选中":false}
+//    UIP.SetAttribute "3星狗粮", {"选中":true}
+//    UIP.SetAttribute "4星狗粮", {"选中":false}
+//End Function
+//Function star4
+//    UIP.SetAttribute "1星狗粮", {"选中":false}
+//    UIP.SetAttribute "2星狗粮", {"选中":false}
+//    UIP.SetAttribute "3星狗粮", {"选中":false}
+//    UIP.SetAttribute "4星狗粮", {"选中":true}
+//End Function
 
 Function selectAll
 
