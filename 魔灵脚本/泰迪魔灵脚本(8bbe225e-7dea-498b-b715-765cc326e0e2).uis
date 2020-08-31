@@ -1,4 +1,4 @@
-
+//
 //狗粮选择互斥代码
 //Function star1
 //    UIP.SetAttribute "1星狗粮", {"选中":True}
@@ -25,6 +25,17 @@
 //    UIP.SetAttribute "4星狗粮", {"选中":true}
 //End Function
 
+//	多选框:
+//				{
+//					注释:"文字大小、高度、宽度是可选属性，如需使用默认值，可保持值为0或直接删除此属性",
+//					名称:"上传日志",
+//					提示内容:"勾选则上传日志",
+//					点击响应:"函数名1",
+//					选中:false,
+//					文字大小:0,
+//					高度:0,
+//					宽度:0
+//				},
 Function selectAll
 
     UIP.SetAttribute "5Z", {"选中":true}
