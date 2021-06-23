@@ -4,7 +4,7 @@ Import "zm.luae" //导入插件,只需执行一次
 zm.Init()  //初始化插件,只需执行一次
 zm.InitBase64 
 Log.Open
-Dim currentVersion = 44	//当前版本号
+Dim currentVersion = 47	//当前版本号
 Dim dirPath= GetSdcardDir() & "/taidi"
 TracePrint "日志记录开始"
 TracePrint Dir.Create(dirPath)
@@ -807,19 +807,21 @@ Function 竞技场循环
             stopTheScript
         End If
         If 比例找色(竞技场开始战斗) = 1 Then 
-            //需要判断是否满防和满状态
-            dim starTop = judgeMoLingStar(481,894,590,1022,true)
-            dim starLeft = judgeMoLingStar(390,757,529,886,true)
-            dim starRight = judgeMoLingStar(394,1020,525,1155,true)
-            dim starBottom = judgeMoLingStar(324,884,455,1018,true)
-            If starTop = 6 and starLeft = 6 and starRight = 6 and starBottom = 6 Then 
-                TracePrint "满防御，跳过"
-                触摸_随机点 670,1222,712,1264	//点击X
-                isFailed = True
-            Else 
-                触摸_随机点 x, y, x + 10, y + 10	//开始战斗
-                success = success + 1
-            End If
+            //判断是否满防和满状态
+//            dim starTop = judgeMoLingStar(481,894,590,1022,true)
+//            dim starLeft = judgeMoLingStar(390,757,529,886,true)
+//            dim starRight = judgeMoLingStar(394,1020,525,1155,true)
+//            dim starBottom = judgeMoLingStar(324,884,455,1018,true)
+//            If starTop = 6 and starLeft = 6 and starRight = 6 and starBottom = 6 Then 
+//                TracePrint "满防御，跳过"
+//                触摸_随机点 670,1222,712,1264	//点击X
+//                isFailed = True
+//            Else 
+//                触摸_随机点 182,1009,248,1151	//开始战斗
+//                success = success + 1
+//            End If
+            触摸_随机点 182,1009,248,1151	//开始战斗
+            success = success + 1
             Goto loading
         End If
         If 比例找色(符文不全) = 1 Then 
@@ -860,17 +862,17 @@ Function 竞技场循环
             End If
             Goto loading
         End If
-        If 比例找色(对话框) = 1 Then 
-            触摸_随机点 142,386,360,1087	//NPC对话,随机点一下
-            Goto loading
-        End If
+//        If 比例找色(对话框) = 1 Then 
+//            触摸_随机点 142,386,360,1087	//NPC对话,随机点一下
+//            Goto loading
+//        End If
         If 比例比色(非自动) = 1 Then 
             比例触摸_随机点 18,208,75,266	//开启自动
             Goto loading
         End If
         If 比例找色(胜利) = 1 Then 
             比例触摸_随机点 216,332,488,1165
-            比例触摸_随机点 216, 332, 488, 1165
+//            比例触摸_随机点 216, 332, 488, 1165
             //点出宝箱
             Goto loading
         End If
